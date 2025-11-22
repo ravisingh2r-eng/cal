@@ -3,176 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GST Calculator - Calculate GST Inclusive & Exclusive | Free Online Tool</title>
-    <meta name="description" content="Free GST Calculator to calculate GST inclusive and exclusive amounts. Support for 5%, 12%, 18%, 28% GST rates. Instant and accurate calculations.">
-    <meta name="keywords" content="gst calculator, gst calculation, gst inclusive, gst exclusive, goods and services tax calculator">
-    <link rel="canonical" href="https://www.calculator.com/calculators/gst-calculator.html">
-
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/responsive.css">
-    <link rel="stylesheet" href="/css/theme.css">
-    <link rel="stylesheet" href="/css/calculators.css">
-    <link rel="stylesheet" href="/css/ads.css">
+    <title>GST Calculator - Free Online Calculator 2024</title>
+    <meta name="description" content="Calculate gst calculator with our free online calculator. Get instant results.">
+    <meta name="keywords" content="gst calculator, gst calculator">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/categories.css">
+    <link rel="stylesheet" href="../css/calculator-page.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
+    <!-- Header -->
+    <header class="site-header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="/"><img src="/assets/images/logo.svg" alt="Logo"></a>
-                    <h1><a href="/">Calculator Platform</a></h1>
+                    <a href="../index.html">🧮 Calculator Platform</a>
                 </div>
-                <button id="themeToggle" class="theme-toggle"></button>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../categories/financial.html">Financial</a></li>
+                        <li><a href="../categories/investment.html">Investment</a></li>
+                        <li><a href="../categories/loan.html">Loan</a></li>
+                        <li><a href="../categories/health.html">Health</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
 
-    <main class="calculator-page">
+    <!-- Top Banner Ad -->
+    <div class="ad-container ad-top-banner">
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="1234567890" data-ad-format="horizontal"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb">
         <div class="container">
-            <div class="page-header">
-                <h1>GST Calculator</h1>
-                <p>Calculate GST inclusive and exclusive amounts instantly</p>
-            </div>
-
-            <div class="ad-container ad-top">
-                <div class="ad-label">Advertisement</div>
-                <div id="ad-slot-top" class="ad-slot"></div>
-            </div>
-
-            <div class="calculator-layout">
-                <div class="calculator-main">
-                    <div class="calculator-card">
-                        <div class="tab-buttons">
-                            <button class="tab-btn active" data-tab="add">Add GST</button>
-                            <button class="tab-btn" data-tab="remove">Remove GST</button>
-                        </div>
-
-                        <div class="tab-content active" id="add-gst">
-                            <h2>Add GST to Amount</h2>
-
-                            <div class="calc-input-group">
-                                <label for="amountExclusive">Amount (Exclusive of GST)</label>
-                                <input type="number" id="amountExclusive" class="calc-input" placeholder="Enter amount" value="1000">
-                            </div>
-
-                            <div class="calc-input-group">
-                                <label>GST Rate (%)</label>
-                                <div class="gst-rate-buttons">
-                                    <button class="rate-btn" data-rate="0">0%</button>
-                                    <button class="rate-btn active" data-rate="5">5%</button>
-                                    <button class="rate-btn" data-rate="12">12%</button>
-                                    <button class="rate-btn" data-rate="18">18%</button>
-                                    <button class="rate-btn" data-rate="28">28%</button>
-                                </div>
-                                <input type="number" id="gstRateAdd" class="calc-input" value="5" step="0.1">
-                            </div>
-
-                            <button id="calculateAddGST" class="btn btn-primary btn-large">Calculate</button>
-
-                            <div class="results-card" id="addResults" style="display:none;">
-                                <div class="result-item">
-                                    <span class="result-label">GST Amount</span>
-                                    <span class="result-value" id="gstAmountAdd">₹ 0</span>
-                                </div>
-                                <div class="result-item main-result">
-                                    <span class="result-label">Total Amount (Inclusive of GST)</span>
-                                    <span class="result-value" id="totalAmountAdd">₹ 0</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tab-content" id="remove-gst">
-                            <h2>Remove GST from Amount</h2>
-
-                            <div class="calc-input-group">
-                                <label for="amountInclusive">Amount (Inclusive of GST)</label>
-                                <input type="number" id="amountInclusive" class="calc-input" placeholder="Enter amount" value="1050">
-                            </div>
-
-                            <div class="calc-input-group">
-                                <label>GST Rate (%)</label>
-                                <div class="gst-rate-buttons">
-                                    <button class="rate-btn" data-rate="0">0%</button>
-                                    <button class="rate-btn active" data-rate="5">5%</button>
-                                    <button class="rate-btn" data-rate="12">12%</button>
-                                    <button class="rate-btn" data-rate="18">18%</button>
-                                    <button class="rate-btn" data-rate="28">28%</button>
-                                </div>
-                                <input type="number" id="gstRateRemove" class="calc-input" value="5" step="0.1">
-                            </div>
-
-                            <button id="calculateRemoveGST" class="btn btn-primary btn-large">Calculate</button>
-
-                            <div class="results-card" id="removeResults" style="display:none;">
-                                <div class="result-item">
-                                    <span class="result-label">Original Amount</span>
-                                    <span class="result-value" id="originalAmount">₹ 0</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="result-label">GST Amount</span>
-                                    <span class="result-value" id="gstAmountRemove">₹ 0</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <aside class="calculator-sidebar">
-                    <div class="ad-container ad-sidebar">
-                        <div class="ad-label">Advertisement</div>
-                        <div id="ad-slot-sidebar" class="ad-slot"></div>
-                    </div>
-
-                    <div class="sidebar-card">
-                        <h3>GST Rates in India</h3>
-                        <ul>
-                            <li><strong>0%:</strong> Essential goods</li>
-                            <li><strong>5%:</strong> Household necessities</li>
-                            <li><strong>12%:</strong> Processed food</li>
-                            <li><strong>18%:</strong> Standard rate</li>
-                            <li><strong>28%:</strong> Luxury items</li>
-                        </ul>
-                    </div>
-
-                    <div class="sidebar-card">
-                        <h3>Related Calculators</h3>
-                        <ul class="related-links">
-                            <li><a href="/calculators/income-tax-calculator.html">Income Tax Calculator</a></li>
-                            <li><a href="/calculators/percentage-calculator.html">Percentage Calculator</a></li>
-                        </ul>
-                    </div>
-                </aside>
-            </div>
-
-            <section class="content-section">
-                <h2>What is GST?</h2>
-                <p>GST (Goods and Services Tax) is an indirect tax levied on the supply of goods and services in India. It has replaced multiple cascading taxes levied by the central and state governments.</p>
-
-                <h2>GST Calculation Formula</h2>
-                <div class="formula-box">
-                    <p><strong>Add GST:</strong> Total = Amount + (Amount × GST Rate / 100)</p>
-                    <p><strong>Remove GST:</strong> Original = Amount / (1 + GST Rate / 100)</p>
-                </div>
-
-                <h2>Types of GST</h2>
-                <ul>
-                    <li><strong>CGST:</strong> Central GST collected by Central Government</li>
-                    <li><strong>SGST:</strong> State GST collected by State Government</li>
-                    <li><strong>IGST:</strong> Integrated GST for inter-state transactions</li>
-                </ul>
-            </section>
+            <a href="../index.html">Home</a> › 
+            <a href="../categories/tax.html">Tax Calculators</a> › 
+            <span>GST Calculator</span>
         </div>
-    </main>
+    </nav>
 
-    <footer class="footer">
+    <div class="calculator-page">
+        <div class="content-wrapper">
+            <aside class="sidebar-left">
+                <div class="ad-container sidebar-ad">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="1111111111"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
+            </aside>
+
+            <article class="main-content">
+                <h1>GST Calculator - Calculate Online Free</h1>
+                
+                <section class="intro">
+                    <p>Use our free online calculator to get instant, accurate results. Plan your finances better with detailed calculations and analysis.</p>
+                </section>
+
+                <!-- Calculator Widget -->
+                <section class="calculator-widget-section">
+                    <div class="calculator-card">
+                        <div id="calculatorInputs"></div>
+                        <button id="calculate" class="btn-primary">Calculate Now</button>
+                        <div id="results" style="display: none;"></div>
+                    </div>
+                </section>
+
+                <!-- Below Calculator Ad (High Value Position) -->
+                <div class="ad-container ad-below-calculator">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="3333333333"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
+
+                <section class="content-section">
+                    <h2>How to Use This Calculator</h2>
+                    <p>Our calculator is designed to be simple and user-friendly. Follow these steps:</p>
+                    <ol>
+                        <li>Enter the required values in the input fields provided above</li>
+                        <li>Click on the "Calculate Now" button to get instant results</li>
+                        <li>View detailed breakdown and analysis of your calculations</li>
+                        <li>Adjust values to compare different scenarios</li>
+                    </ol>
+                </section>
+
+                <section class="content-section">
+                    <h2>Benefits of Using Our Calculator</h2>
+                    <ul>
+                        <li><strong>100% Free:</strong> No charges, no hidden fees. Use unlimited times.</li>
+                        <li><strong>Instant Results:</strong> Get accurate calculations in seconds.</li>
+                        <li><strong>No Registration:</strong> Start calculating immediately without signup.</li>
+                        <li><strong>Mobile Friendly:</strong> Works perfectly on all devices.</li>
+                        <li><strong>Privacy Protected:</strong> Your data is never stored or shared.</li>
+                        <li><strong>Accurate Formulas:</strong> Uses standard calculation methods.</li>
+                    </ul>
+                </section>
+
+                <div class="related-calculators">
+                    <h2>Related Calculators</h2>
+                    <div class="related-grid">
+                        <a href="emi-calculator.html" class="related-calc-card"><strong>EMI Calculator</strong></a>
+                        <a href="sip-calculator.html" class="related-calc-card"><strong>SIP Calculator</strong></a>
+                        <a href="home-loan-calculator.html" class="related-calc-card"><strong>Home Loan Calculator</strong></a>
+                        <a href="bmi-calculator.html" class="related-calc-card"><strong>BMI Calculator</strong></a>
+                    </div>
+                </div>
+            </article>
+
+            <aside class="sidebar-right">
+                <div class="ad-container sidebar-ad">
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXX" data-ad-slot="4444444444"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="site-footer">
         <div class="container">
             <p>&copy; 2024 Calculator Platform. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="/js/app.js"></script>
-    <script src="/js/theme-switcher.js"></script>
-    <script src="/js/ad-manager.js"></script>
-    <script src="/js/calculators/gst-calc.js"></script>
+    <script src="../js/calculators/gst-calc.js"></script>
+    <script>
+        window.AdManager = {
+            refresh: function() {
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                } catch (e) {}
+            }
+        };
+        window.trackCalculation = function(type, inputs, results) {
+            console.log('Calculation tracked:', type);
+        };
+    </script>
 </body>
 </html>

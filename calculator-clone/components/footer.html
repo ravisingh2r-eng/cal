@@ -1,48 +1,94 @@
-<!-- Common Footer Component -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Popular Calculators</h4>
-                <ul>
-                    <li><a href="/calculators/emi-calculator.html">EMI Calculator</a></li>
-                    <li><a href="/calculators/gst-calculator.html">GST Calculator</a></li>
-                    <li><a href="/calculators/income-tax-calculator.html">Income Tax Calculator</a></li>
-                    <li><a href="/calculators/bmi-calculator.html">BMI Calculator</a></li>
-                    <li><a href="/calculators/sip-calculator.html">SIP Calculator</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Financial Tools</h4>
-                <ul>
-                    <li><a href="/calculators/loan-calculator.html">Loan Calculator</a></li>
-                    <li><a href="/calculators/fd-calculator.html">FD Calculator</a></li>
-                    <li><a href="/calculators/rd-calculator.html">RD Calculator</a></li>
-                    <li><a href="/calculators/ppf-calculator.html">PPF Calculator</a></li>
-                    <li><a href="/calculators/compound-interest-calculator.html">Compound Interest</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Health Tools</h4>
-                <ul>
-                    <li><a href="/calculators/calorie-calculator.html">Calorie Calculator</a></li>
-                    <li><a href="/calculators/age-calculator.html">Age Calculator</a></li>
-                    <li><a href="/calculators/pregnancy-calculator.html">Pregnancy Calculator</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="/about.html">About Us</a></li>
-                    <li><a href="/privacy.html">Privacy Policy</a></li>
-                    <li><a href="/terms.html">Terms of Service</a></li>
-                    <li><a href="/contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Calculator Platform. All rights reserved.</p>
-            <p>Disclaimer: These calculators are provided for informational purposes. Always consult with professionals for important financial or health decisions.</p>
-        </div>
+    <!-- Bottom Content Ad -->
+    <div class="ad-container ad-bottom-content">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXX"
+             data-ad-slot="9876543210"
+             data-ad-format="rectangle"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
-</footer>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Popular Calculators</h3>
+                    <ul>
+                        <li><a href="emi-calculator.html">EMI Calculator</a></li>
+                        <li><a href="sip-calculator.html">SIP Calculator</a></li>
+                        <li><a href="income-tax-calculator.html">Income Tax Calculator</a></li>
+                        <li><a href="bmi-calculator.html">BMI Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="../categories/financial.html">Financial Calculators</a></li>
+                        <li><a href="../categories/investment.html">Investment Calculators</a></li>
+                        <li><a href="../categories/loan.html">Loan Calculators</a></li>
+                        <li><a href="../categories/health.html">Health Calculators</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Free online calculators for finance, health, education, and more. 125+ calculators to help you make better decisions.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Calculator Platform. All rights reserved.</p>
+                <p>
+                    <a href="../privacy-policy.html">Privacy Policy</a> | 
+                    <a href="../terms-of-service.html">Terms of Service</a> | 
+                    <a href="../contact.html">Contact Us</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Bottom Ad (Mobile Only) -->
+    <div class="ad-container ad-sticky-bottom mobile-only">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXX"
+             data-ad-slot="5555555555"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <!-- Analytics & Ad Scripts -->
+    <script>
+        // Ad refresh function
+        window.AdManager = {
+            refresh: function() {
+                try {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                } catch (e) {
+                    console.log('Ad refresh error:', e);
+                }
+            }
+        };
+
+        // Track calculation function
+        window.trackCalculation = function(calcType, inputs, results) {
+            // Google Analytics tracking (if implemented)
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'calculate', {
+                    'event_category': 'Calculator',
+                    'event_label': calcType,
+                    'value': 1
+                });
+            }
+        };
+    </script>
+
+    <!-- Load Calculator Script -->
+    <script src="{{CALCULATOR_JS}}"></script>
+</body>
+</html>
