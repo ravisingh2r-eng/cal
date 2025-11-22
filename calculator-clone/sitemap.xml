@@ -1,887 +1,878 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
     <!-- Homepage -->
     <url>
-        <loc>https://www.calculator.com/</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
+        <loc>https://yourdomain.com/</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-
+    
+    <!-- Category Pages -->
     <url>
-        <loc>https://www.calculator.com/calculators/80c-tax-saving-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
+        <loc>https://yourdomain.com/categories/financial.html</loc>
+        <lastmod>2025-11-22</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/advance-tax-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/age-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/angle-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/area-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/average-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/baby-growth-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/balance-transfer-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/basic-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/bike-loan-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/bitcoin-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/blood-pressure-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/bmi-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/bmr-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
+        <loc>https://yourdomain.com/categories/investment.html</loc>
+        <lastmod>2025-11-22</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/body-fat-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/bonus-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/break-even-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/business-loan-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.95</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/cagr-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/calorie-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/capital-gains-tax-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/car-insurance-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.95</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/car-lease-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/car-loan-emi-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/child-education-planning-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/compound-interest-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/conception-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/credit-card-emi-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.95</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/credit-score-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.95</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/crypto-profit-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/crypto-sip-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/crypto-tax-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/currency-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/data-storage-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/date-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/debt-consolidation-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/debt-payoff-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/discount-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/dividend-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/down-payment-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/education-loan-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.95</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/elss-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/emi-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/energy-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
+        <loc>https://yourdomain.com/categories/loan.html</loc>
+        <lastmod>2025-11-22</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/epf-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/exponent-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/fd-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/fraction-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/freelancer-income-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/fuel-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/fuel-cost-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/gold-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/gpa-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/grade-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/gratuity-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/gst-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/health-insurance-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.95</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/heart-rate-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
+        <loc>https://yourdomain.com/categories/tax.html</loc>
+        <lastmod>2025-11-22</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/home-affordability-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/home-loan-eligibility-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.95</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/hra-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/ideal-weight-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/income-tax-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/inflation-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
+        <loc>https://yourdomain.com/categories/health.html</loc>
+        <lastmod>2025-11-22</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/invoice-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/ivf-success-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/lease-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/life-insurance-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.95</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/loan-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/logarithm-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
+        <loc>https://yourdomain.com/categories/education.html</loc>
+        <lastmod>2025-11-22</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/lumpsum-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/margin-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/mileage-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/minimum-payment-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/mortgage-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/mutual-fund-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/mutual-fund-return-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/nps-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/npv-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/old-vs-new-tax-regime-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/ovulation-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/payback-period-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/percentage-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/period-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/portfolio-rebalancing-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/power-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/ppf-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/pregnancy-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/pressure-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/professional-tax-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/profit-margin-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/property-tax-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/property-valuation-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/protein-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/ratio-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/rd-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/rental-yield-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/retirement-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/roi-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/salary-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/scholarship-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/scientific-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/section-80d-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/simple-interest-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/sip-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/speed-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
+        <loc>https://yourdomain.com/categories/converters.html</loc>
+        <lastmod>2025-11-22</lastmod>
         <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/categories/utility.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Calculator Pages (125 total) -->
+    <url>
+        <loc>https://yourdomain.com/calculators/emi-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/square-root-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/sip-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/stamp-duty-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/home-loan-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/startup-cost-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/income-tax-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/steps-calories-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/bmi-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/stock-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/gst-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/stock-return-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/fd-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/student-loan-emi-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/ppf-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/study-abroad-cost-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/car-loan-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/tds-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/mutual-fund-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/term-insurance-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.95</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/time-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/rd-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/time-duration-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/personal-loan-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/tip-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/compound-interest-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/two-wheeler-insurance-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.95</priority>
-    </url>
-
-    <url>
-        <loc>https://www.calculator.com/calculators/unit-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/simple-interest-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/vehicle-depreciation-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/gratuity-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/volume-converter.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/epf-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/water-intake-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/nps-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
     <url>
-        <loc>https://www.calculator.com/calculators/working-capital-calculator.html</loc>
-        <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <loc>https://yourdomain.com/calculators/retirement-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
-
+    <url>
+        <loc>https://yourdomain.com/calculators/sukanya-samriddhi-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/cagr-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/lumpsum-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/elss-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/swp-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/step-up-sip-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/loan-emi-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/bike-loan-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/education-loan-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/business-loan-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/gold-loan-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/loan-against-property-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/loan-prepayment-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/balance-transfer-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/car-loan-emi-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/home-loan-eligibility-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/80c-tax-saving-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/advance-tax-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/capital-gains-tax-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/tds-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/hra-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/tds-on-salary-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/salary-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/take-home-salary-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/bonus-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/arrear-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/leave-encashment-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/freelancer-income-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/life-insurance-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/health-insurance-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/car-insurance-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/bmi-calc.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/bmr-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/calorie-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/body-fat-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/ideal-weight-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/protein-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/water-intake-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/pregnancy-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/ovulation-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/period-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/due-date-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/conception-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/baby-growth-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/ivf-success-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/blood-pressure-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/heart-rate-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/pace-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/age-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/date-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/percentage-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/discount-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/margin-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/roi-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/markup-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/vat-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/sales-tax-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/inflation-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/currency-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/mortgage-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/rent-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/home-affordability-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/refinance-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/down-payment-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/property-tax-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/gpa-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/grade-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/cgpa-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/percentage-to-gpa-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/student-loan-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/child-education-planning-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/average-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/tip-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/ratio-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/fraction-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/exponent-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/square-root-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/logarithm-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/scientific-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/basic-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/length-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/weight-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/temperature-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/area-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/volume-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/speed-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/time-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/data-storage-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/energy-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/pressure-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/power-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/angle-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/fuel-converter.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/fuel-cost-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/mileage-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/trip-cost-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/car-lease-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/bitcoin-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/crypto-profit-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/crypto-sip-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/crypto-tax-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/dividend-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/stock-profit-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/stock-average-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/gold-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/break-even-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/npv-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/irr-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/payback-period-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/invoice-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/lease-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/debt-to-income-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/debt-payoff-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/debt-consolidation-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/credit-score-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/credit-card-payoff-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/credit-card-emi-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://yourdomain.com/calculators/minimum-payment-calculator.html</loc>
+        <lastmod>2025-11-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
