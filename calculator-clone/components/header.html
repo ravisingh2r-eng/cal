@@ -22,15 +22,31 @@
     
     <!-- Canonical URL -->
     <link rel="canonical" href="{{CANONICAL_URL}}">
-    
+
+    <!-- Google Analytics 4 (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            'send_page_view': true,
+            'anonymize_ip': true,
+            'cookie_flags': 'SameSite=None;Secure'
+        });
+    </script>
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/categories.css">
     <link rel="stylesheet" href="../css/calculator-page.css">
-    
+
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX"
          crossorigin="anonymous"></script>
+
+    <!-- Analytics Tracking -->
+    <script src="../js/analytics.js"></script>
     
     <!-- Schema Markup -->
     <script type="application/ld+json">

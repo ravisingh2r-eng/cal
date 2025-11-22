@@ -1,240 +1,251 @@
 /**
- * Analytics Integration
- * Google Analytics 4 and custom event tracking
+ * Google Analytics 4 (GA4) Event Tracking
+ * Enhanced tracking for calculator usage and user behavior
  */
 
 (function() {
     'use strict';
 
-    const ANALYTICS_CONFIG = {
-        gaTrackingId: 'G-XXXXXXXXXX', // Replace with actual GA4 tracking ID
-        enabled: true,
-        debug: false
-    };
+    // Configuration
+    const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Replace with your actual GA4 Measurement ID
 
-    /**
-     * Initialize analytics
-     */
-    function init() {
-        if (!ANALYTICS_CONFIG.enabled) {
-            console.log('Analytics disabled');
+    // Initialize GA4
+    function initAnalytics() {
+        // Check if gtag is already loaded
+        if (typeof gtag !== 'undefined') {
+            console.log('Google Analytics initialized');
             return;
         }
 
-        // Load Google Analytics 4
-        loadGA4();
-
-        // Track initial page view
-        trackPageView();
-
-        // Setup automatic event tracking
-        setupAutoTracking();
-    }
-
-    /**
-     * Load Google Analytics 4 script
-     */
-    function loadGA4() {
-        // Load gtag.js
-        const script = document.createElement('script');
-        script.async = true;
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${ANALYTICS_CONFIG.gaTrackingId}`;
-        document.head.appendChild(script);
-
-        // Initialize gtag
+        // Load gtag.js if not already loaded
         window.dataLayer = window.dataLayer || [];
-        window.gtag = function() {
-            window.dataLayer.push(arguments);
-        };
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        
         gtag('js', new Date());
-        gtag('config', ANALYTICS_CONFIG.gaTrackingId, {
-            send_page_view: false // We'll track manually
+        gtag('config', GA_MEASUREMENT_ID, {
+            'send_page_view': true,
+            'anonymize_ip': true // GDPR compliance
         });
-
-        console.log('Google Analytics 4 initialized');
     }
 
-    /**
-     * Track page view
-     */
-    function trackPageView(pagePath = window.location.pathname) {
-        if (typeof gtag !== 'function') return;
-
-        gtag('event', 'page_view', {
-            page_path: pagePath,
-            page_title: document.title,
-            page_location: window.location.href
-        });
-
-        if (ANALYTICS_CONFIG.debug) {
-            console.log('Page view tracked:', pagePath);
+    // Track Calculator Usage
+    window.trackCalculation = function(calculatorType, inputs, results) {
+        if (typeof gtag === 'undefined') {
+            console.warn('Google Analytics not loaded');
+            return;
         }
-    }
 
-    /**
-     * Track custom event
-     */
-    function trackEvent(category, action, label = '', value = 0) {
-        if (typeof gtag !== 'function') return;
-
-        gtag('event', action, {
-            event_category: category,
-            event_label: label,
-            value: value
+        // Main calculation event
+        gtag('event', 'calculate', {
+            'event_category': 'Calculator',
+            'event_label': calculatorType,
+            'calculator_type': calculatorType,
+            'value': 1
         });
 
-        if (ANALYTICS_CONFIG.debug) {
-            console.log('Event tracked:', { category, action, label, value });
-        }
-    }
-
-    /**
-     * Track calculator usage
-     */
-    function trackCalculation(calculatorType, inputs, result) {
-        trackEvent('calculator', 'calculate', calculatorType);
-
-        // Send calculator-specific data
-        gtag('event', 'calculator_used', {
-            calculator_type: calculatorType,
-            ...inputs
-        });
-    }
-
-    /**
-     * Track button clicks
-     */
-    function trackButtonClick(buttonName) {
-        trackEvent('engagement', 'button_click', buttonName);
-    }
-
-    /**
-     * Track outbound links
-     */
-    function trackOutboundLink(url) {
-        trackEvent('outbound', 'click', url);
-    }
-
-    /**
-     * Track social shares
-     */
-    function trackShare(platform) {
-        trackEvent('social', 'share', platform);
-    }
-
-    /**
-     * Track errors
-     */
-    function trackError(errorMessage, errorType = 'javascript') {
-        trackEvent('error', errorType, errorMessage);
-    }
-
-    /**
-     * Track timing
-     */
-    function trackTiming(category, variable, time) {
-        if (typeof gtag !== 'function') return;
-
-        gtag('event', 'timing_complete', {
-            name: variable,
-            value: time,
-            event_category: category
-        });
-    }
-
-    /**
-     * Setup automatic event tracking
-     */
-    function setupAutoTracking() {
-        // Track all outbound links
-        document.addEventListener('click', (e) => {
-            const link = e.target.closest('a');
-            if (link && link.hostname !== window.location.hostname) {
-                trackOutboundLink(link.href);
-            }
+        // Track specific calculator metrics
+        gtag('event', calculatorType + '_calculation', {
+            'event_category': 'Calculator_Detailed',
+            'event_label': calculatorType,
+            'inputs': JSON.stringify(inputs),
+            'non_interaction': false
         });
 
-        // Track form submissions
-        document.addEventListener('submit', (e) => {
-            const form = e.target;
-            if (form.id) {
-                trackEvent('form', 'submit', form.id);
-            }
+        // Track user engagement
+        gtag('event', 'user_engagement', {
+            'engagement_time_msec': 100,
+            'calculator_used': calculatorType
         });
 
-        // Track JavaScript errors
-        window.addEventListener('error', (e) => {
-            trackError(e.message, 'javascript_error');
-        });
-
-        // Track unhandled promise rejections
-        window.addEventListener('unhandledrejection', (e) => {
-            trackError(e.reason, 'promise_rejection');
-        });
-
-        // Track page visibility
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                trackEvent('engagement', 'page_hidden');
-            } else {
-                trackEvent('engagement', 'page_visible');
-            }
-        });
-
-        // Track scroll depth
-        let maxScroll = 0;
-        window.addEventListener('scroll', APP.throttle(() => {
-            const scrollPercent = Math.round(
-                (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-            );
-
-            if (scrollPercent > maxScroll && scrollPercent % 25 === 0) {
-                maxScroll = scrollPercent;
-                trackEvent('engagement', 'scroll_depth', `${scrollPercent}%`);
-            }
-        }, 500));
-    }
-
-    /**
-     * Track user engagement time
-     */
-    function trackEngagementTime() {
-        const startTime = Date.now();
-
-        window.addEventListener('beforeunload', () => {
-            const engagementTime = Math.round((Date.now() - startTime) / 1000);
-            trackTiming('engagement', 'time_on_page', engagementTime);
-        });
-    }
-
-    // Export public API
-    window.trackPageView = trackPageView;
-    window.trackEvent = trackEvent;
-    window.trackCalculation = trackCalculation;
-    window.trackButtonClick = trackButtonClick;
-    window.trackOutboundLink = trackOutboundLink;
-    window.trackShare = trackShare;
-    window.trackError = trackError;
-
-    window.Analytics = {
-        trackPageView,
-        trackEvent,
-        trackCalculation,
-        trackButtonClick,
-        trackOutboundLink,
-        trackShare,
-        trackError,
-        trackTiming
+        console.log('Analytics: Tracked calculation -', calculatorType);
     };
 
-    // Initialize
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
+    // Track Page Views (Enhanced)
+    function trackPageView() {
+        if (typeof gtag === 'undefined') return;
+
+        const page_title = document.title;
+        const page_location = window.location.href;
+        const page_path = window.location.pathname;
+
+        gtag('event', 'page_view', {
+            page_title: page_title,
+            page_location: page_location,
+            page_path: page_path
+        });
     }
 
-    // Track engagement time
-    trackEngagementTime();
+    // Track Button Clicks
+    window.trackButtonClick = function(buttonName, category) {
+        if (typeof gtag === 'undefined') return;
+
+        gtag('event', 'button_click', {
+            'event_category': category || 'Button',
+            'event_label': buttonName,
+            'button_name': buttonName
+        });
+    };
+
+    // Track External Links
+    function trackExternalLinks() {
+        document.addEventListener('click', function(e) {
+            const link = e.target.closest('a');
+            if (!link) return;
+
+            const href = link.getAttribute('href');
+            if (!href) return;
+
+            // Track external links
+            if (href.startsWith('http') && !href.includes(window.location.hostname)) {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'click', {
+                        'event_category': 'External Link',
+                        'event_label': href,
+                        'transport_type': 'beacon'
+                    });
+                }
+            }
+        });
+    }
+
+    // Track Form Interactions
+    window.trackFormInteraction = function(formName, action) {
+        if (typeof gtag === 'undefined') return;
+
+        gtag('event', action, {
+            'event_category': 'Form',
+            'event_label': formName,
+            'form_name': formName
+        });
+    };
+
+    // Track Errors
+    window.trackError = function(errorMessage, errorType) {
+        if (typeof gtag === 'undefined') return;
+
+        gtag('event', 'exception', {
+            'description': errorMessage,
+            'error_type': errorType || 'general',
+            'fatal': false
+        });
+    };
+
+    // Track Calculator Results Viewed
+    window.trackResultsView = function(calculatorType, resultType) {
+        if (typeof gtag === 'undefined') return;
+
+        gtag('event', 'view_results', {
+            'event_category': 'Calculator',
+            'event_label': calculatorType,
+            'result_type': resultType
+        });
+    };
+
+    // Track Time on Calculator
+    let calculatorStartTime = Date.now();
+    
+    window.trackTimeOnCalculator = function(calculatorType) {
+        if (typeof gtag === 'undefined') return;
+
+        const timeSpent = Math.round((Date.now() - calculatorStartTime) / 1000);
+        
+        gtag('event', 'time_on_calculator', {
+            'event_category': 'Engagement',
+            'event_label': calculatorType,
+            'value': timeSpent,
+            'time_seconds': timeSpent
+        });
+    };
+
+    // Track Ad Impressions
+    window.trackAdImpression = function(adSlot, adPosition) {
+        if (typeof gtag === 'undefined') return;
+
+        gtag('event', 'ad_impression', {
+            'event_category': 'Advertising',
+            'event_label': adSlot,
+            'ad_position': adPosition
+        });
+    };
+
+    // Track Search (if you add search functionality)
+    window.trackSearch = function(searchTerm) {
+        if (typeof gtag === 'undefined') return;
+
+        gtag('event', 'search', {
+            'search_term': searchTerm
+        });
+    };
+
+    // Track Social Shares (if you add share buttons)
+    window.trackSocialShare = function(platform, contentType) {
+        if (typeof gtag === 'undefined') return;
+
+        gtag('event', 'share', {
+            'method': platform,
+            'content_type': contentType
+        });
+    };
+
+    // Enhanced User Engagement Tracking
+    let userEngagementTimer;
+    function trackUserEngagement() {
+        clearTimeout(userEngagementTimer);
+        
+        userEngagementTimer = setTimeout(function() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'engaged_session', {
+                    'event_category': 'Engagement',
+                    'session_engaged': true
+                });
+            }
+        }, 10000); // 10 seconds of activity = engaged session
+    }
+
+    // Track scroll depth
+    let maxScroll = 0;
+    function trackScrollDepth() {
+        const scrollPercentage = Math.round(
+            (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100
+        );
+
+        if (scrollPercentage > maxScroll && scrollPercentage % 25 === 0) {
+            maxScroll = scrollPercentage;
+            
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'scroll', {
+                    'event_category': 'Engagement',
+                    'event_label': scrollPercentage + '%',
+                    'scroll_depth': scrollPercentage
+                });
+            }
+        }
+    }
+
+    // Initialize on page load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            initAnalytics();
+            trackExternalLinks();
+            
+            // Track user engagement
+            document.addEventListener('mousemove', trackUserEngagement);
+            document.addEventListener('keypress', trackUserEngagement);
+            document.addEventListener('click', trackUserEngagement);
+            
+            // Track scroll depth
+            window.addEventListener('scroll', trackScrollDepth);
+        });
+    } else {
+        initAnalytics();
+        trackExternalLinks();
+    }
+
+    // Track before page unload
+    window.addEventListener('beforeunload', function() {
+        const calculatorType = document.querySelector('h1')?.textContent || 'unknown';
+        trackTimeOnCalculator(calculatorType);
+    });
 
 })();
