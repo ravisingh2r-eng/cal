@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converters - Free Online Tools</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/categories.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <h1>🔄 Unit Converters</h1>
+            <p class="category-count">20+ Conversion Tools</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search converters..." onkeyup="searchCalculators()">
+        </div>
+
+        <div class="calculators-grid" id="calculatorsGrid">
+            <a href="../calculators/currency-converter.html" class="calculator-card">
+                <h3>Currency Converter</h3>
+                <p>Convert between major world currencies with live rates</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/length-converter.html" class="calculator-card">
+                <h3>Length Converter</h3>
+                <p>Convert between meters, feet, inches, kilometers, miles</p>
+            </a>
+
+            <a href="../calculators/weight-converter.html" class="calculator-card">
+                <h3>Weight Converter</h3>
+                <p>Convert between kilograms, pounds, grams, ounces</p>
+            </a>
+
+            <a href="../calculators/temperature-converter.html" class="calculator-card">
+                <h3>Temperature Converter</h3>
+                <p>Convert between Celsius, Fahrenheit, and Kelvin</p>
+            </a>
+
+            <a href="../calculators/area-converter.html" class="calculator-card">
+                <h3>Area Converter</h3>
+                <p>Convert between square meters, acres, hectares, sq ft</p>
+            </a>
+
+            <a href="../calculators/volume-converter.html" class="calculator-card">
+                <h3>Volume Converter</h3>
+                <p>Convert between liters, gallons, milliliters, cubic meters</p>
+            </a>
+
+            <a href="../calculators/speed-converter.html" class="calculator-card">
+                <h3>Speed Converter</h3>
+                <p>Convert between km/h, mph, m/s, knots</p>
+            </a>
+
+            <a href="../calculators/time-converter.html" class="calculator-card">
+                <h3>Time Converter</h3>
+                <p>Convert between seconds, minutes, hours, days</p>
+            </a>
+
+            <a href="../calculators/data-storage-converter.html" class="calculator-card">
+                <h3>Data Storage Converter</h3>
+                <p>Convert between bytes, KB, MB, GB, TB</p>
+            </a>
+
+            <a href="../calculators/energy-converter.html" class="calculator-card">
+                <h3>Energy Converter</h3>
+                <p>Convert between joules, calories, kWh, BTU</p>
+            </a>
+
+            <a href="../calculators/power-converter.html" class="calculator-card">
+                <h3>Power Converter</h3>
+                <p>Convert between watts, horsepower, kilowatts</p>
+            </a>
+
+            <a href="../calculators/pressure-converter.html" class="calculator-card">
+                <h3>Pressure Converter</h3>
+                <p>Convert between pascal, bar, psi, atm</p>
+            </a>
+
+            <a href="../calculators/angle-converter.html" class="calculator-card">
+                <h3>Angle Converter</h3>
+                <p>Convert between degrees, radians, gradians</p>
+            </a>
+
+            <a href="../calculators/number-base-converter.html" class="calculator-card">
+                <h3>Number Base Converter</h3>
+                <p>Convert between binary, decimal, hexadecimal, octal</p>
+            </a>
+
+            <a href="../calculators/roman-numeral-converter.html" class="calculator-card">
+                <h3>Roman Numeral Converter</h3>
+                <p>Convert between Roman numerals and decimal numbers</p>
+            </a>
+
+            <a href="../calculators/fraction-converter.html" class="calculator-card">
+                <h3>Fraction to Decimal Converter</h3>
+                <p>Convert fractions to decimals and vice versa</p>
+            </a>
+
+            <a href="../calculators/binary-converter.html" class="calculator-card">
+                <h3>Binary Converter</h3>
+                <p>Convert binary to decimal, hexadecimal, and octal</p>
+            </a>
+
+            <a href="../calculators/hex-converter.html" class="calculator-card">
+                <h3>Hexadecimal Converter</h3>
+                <p>Convert hexadecimal to decimal, binary, and octal</p>
+            </a>
+
+            <a href="../calculators/scientific-notation-converter.html" class="calculator-card">
+                <h3>Scientific Notation Converter</h3>
+                <p>Convert numbers to and from scientific notation</p>
+            </a>
+
+            <a href="../calculators/fuel-efficiency-converter.html" class="calculator-card">
+                <h3>Fuel Efficiency Converter</h3>
+                <p>Convert between km/L, mpg, L/100km</p>
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Calculator Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function searchCalculators() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const grid = document.getElementById('calculatorsGrid');
+            const cards = grid.getElementsByClassName('calculator-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].getElementsByTagName('h3')[0];
+                const desc = cards[i].getElementsByTagName('p')[0];
+                const titleText = title.textContent || title.innerText;
+                const descText = desc.textContent || desc.innerText;
+                
+                if (titleText.toLowerCase().indexOf(filter) > -1 || 
+                    descText.toLowerCase().indexOf(filter) > -1) {
+                    cards[i].style.display = '';
+                } else {
+                    cards[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

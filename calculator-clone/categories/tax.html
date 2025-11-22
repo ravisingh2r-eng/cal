@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculators - Free Online Tools</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/categories.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <h1>📊 Tax Calculators</h1>
+            <p class="category-count">8+ Tax Planning Tools</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search calculators..." onkeyup="searchCalculators()">
+        </div>
+
+        <div class="calculators-grid" id="calculatorsGrid">
+            <a href="../calculators/income-tax-calculator.html" class="calculator-card">
+                <h3>Income Tax Calculator</h3>
+                <p>Calculate income tax for FY 2024-25 with old and new tax regime comparison</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/gst-calculator.html" class="calculator-card">
+                <h3>GST Calculator</h3>
+                <p>Calculate GST inclusive and exclusive amounts with different rates</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/tds-calculator.html" class="calculator-card">
+                <h3>TDS Calculator</h3>
+                <p>Calculate Tax Deducted at Source for various income types</p>
+            </a>
+
+            <a href="../calculators/capital-gains-calculator.html" class="calculator-card">
+                <h3>Capital Gains Tax Calculator</h3>
+                <p>Calculate short-term and long-term capital gains tax on investments</p>
+            </a>
+
+            <a href="../calculators/advance-tax-calculator.html" class="calculator-card">
+                <h3>Advance Tax Calculator</h3>
+                <p>Calculate quarterly advance tax payments</p>
+            </a>
+
+            <a href="../calculators/hra-calculator.html" class="calculator-card">
+                <h3>HRA Calculator</h3>
+                <p>Calculate House Rent Allowance exemption for tax savings</p>
+            </a>
+
+            <a href="../calculators/80c-calculator.html" class="calculator-card">
+                <h3>Section 80C Calculator</h3>
+                <p>Calculate tax savings under Section 80C investments</p>
+            </a>
+
+            <a href="../calculators/professional-tax-calculator.html" class="calculator-card">
+                <h3>Professional Tax Calculator</h3>
+                <p>Calculate state-wise professional tax deductions</p>
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Calculator Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function searchCalculators() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const grid = document.getElementById('calculatorsGrid');
+            const cards = grid.getElementsByClassName('calculator-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].getElementsByTagName('h3')[0];
+                const desc = cards[i].getElementsByTagName('p')[0];
+                const titleText = title.textContent || title.innerText;
+                const descText = desc.textContent || desc.innerText;
+                
+                if (titleText.toLowerCase().indexOf(filter) > -1 || 
+                    descText.toLowerCase().indexOf(filter) > -1) {
+                    cards[i].style.display = '';
+                } else {
+                    cards[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

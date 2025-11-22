@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Fitness Calculators - Free Online Tools</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/categories.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <h1>❤️ Health & Fitness Calculators</h1>
+            <p class="category-count">18+ Health & Wellness Tools</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search calculators..." onkeyup="searchCalculators()">
+        </div>
+
+        <div class="calculators-grid" id="calculatorsGrid">
+            <a href="../calculators/bmi-calculator.html" class="calculator-card">
+                <h3>BMI Calculator</h3>
+                <p>Calculate Body Mass Index and check your weight status</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/bmr-calculator.html" class="calculator-card">
+                <h3>BMR Calculator</h3>
+                <p>Calculate Basal Metabolic Rate using Mifflin-St Jeor equation</p>
+            </a>
+
+            <a href="../calculators/calorie-calculator.html" class="calculator-card">
+                <h3>Calorie Calculator</h3>
+                <p>Calculate daily calorie needs based on activity level and goals</p>
+                <span class="calculator-badge new">New</span>
+            </a>
+
+            <a href="../calculators/protein-calculator.html" class="calculator-card">
+                <h3>Protein Calculator</h3>
+                <p>Calculate daily protein requirement based on activity level</p>
+            </a>
+
+            <a href="../calculators/water-intake-calculator.html" class="calculator-card">
+                <h3>Water Intake Calculator</h3>
+                <p>Calculate daily water intake based on weight and activity</p>
+            </a>
+
+            <a href="../calculators/body-fat-calculator.html" class="calculator-card">
+                <h3>Body Fat Calculator</h3>
+                <p>Calculate body fat percentage using Navy method</p>
+            </a>
+
+            <a href="../calculators/ideal-weight-calculator.html" class="calculator-card">
+                <h3>Ideal Weight Calculator</h3>
+                <p>Calculate your ideal weight based on height and gender</p>
+            </a>
+
+            <a href="../calculators/heart-rate-calculator.html" class="calculator-card">
+                <h3>Heart Rate Calculator</h3>
+                <p>Calculate target heart rate zones for exercise</p>
+            </a>
+
+            <a href="../calculators/steps-calories-calculator.html" class="calculator-card">
+                <h3>Steps to Calories Calculator</h3>
+                <p>Calculate calories burned from daily steps</p>
+            </a>
+
+            <a href="../calculators/macro-calculator.html" class="calculator-card">
+                <h3>Macro Calculator</h3>
+                <p>Calculate macronutrient distribution for your diet</p>
+            </a>
+
+            <a href="../calculators/pregnancy-calculator.html" class="calculator-card">
+                <h3>Pregnancy Calculator</h3>
+                <p>Calculate due date and pregnancy week by week</p>
+            </a>
+
+            <a href="../calculators/conception-calculator.html" class="calculator-card">
+                <h3>Conception Calculator</h3>
+                <p>Calculate conception date and fertile window</p>
+                <span class="calculator-badge new">New</span>
+            </a>
+
+            <a href="../calculators/ovulation-calculator.html" class="calculator-card">
+                <h3>Ovulation Calculator</h3>
+                <p>Calculate ovulation and fertile days for conception</p>
+            </a>
+
+            <a href="../calculators/period-calculator.html" class="calculator-card">
+                <h3>Period Calculator</h3>
+                <p>Track and predict menstrual cycle dates</p>
+            </a>
+
+            <a href="../calculators/pace-calculator.html" class="calculator-card">
+                <h3>Running Pace Calculator</h3>
+                <p>Calculate running pace, speed, and finish time</p>
+            </a>
+
+            <a href="../calculators/vo2max-calculator.html" class="calculator-card">
+                <h3>VO2 Max Calculator</h3>
+                <p>Calculate maximum oxygen uptake for fitness level</p>
+            </a>
+
+            <a href="../calculators/body-age-calculator.html" class="calculator-card">
+                <h3>Body Age Calculator</h3>
+                <p>Calculate biological age based on health metrics</p>
+            </a>
+
+            <a href="../calculators/sleep-calculator.html" class="calculator-card">
+                <h3>Sleep Calculator</h3>
+                <p>Calculate optimal sleep and wake times</p>
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Calculator Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function searchCalculators() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const grid = document.getElementById('calculatorsGrid');
+            const cards = grid.getElementsByClassName('calculator-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].getElementsByTagName('h3')[0];
+                const desc = cards[i].getElementsByTagName('p')[0];
+                const titleText = title.textContent || title.innerText;
+                const descText = desc.textContent || desc.innerText;
+                
+                if (titleText.toLowerCase().indexOf(filter) > -1 || 
+                    descText.toLowerCase().indexOf(filter) > -1) {
+                    cards[i].style.display = '';
+                } else {
+                    cards[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

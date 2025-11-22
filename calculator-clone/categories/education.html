@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Calculators - Free Online Tools</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/categories.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <h1>🎓 Education Calculators</h1>
+            <p class="category-count">6+ Academic Tools</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search calculators..." onkeyup="searchCalculators()">
+        </div>
+
+        <div class="calculators-grid" id="calculatorsGrid">
+            <a href="../calculators/gpa-calculator.html" class="calculator-card">
+                <h3>GPA Calculator</h3>
+                <p>Calculate Grade Point Average with 4.0 and 10.0 scale support</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/cgpa-calculator.html" class="calculator-card">
+                <h3>CGPA Calculator</h3>
+                <p>Calculate Cumulative Grade Point Average across semesters</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/grade-calculator.html" class="calculator-card">
+                <h3>Grade Calculator</h3>
+                <p>Convert marks to letter grades with percentage calculation</p>
+            </a>
+
+            <a href="../calculators/percentage-calculator.html" class="calculator-card">
+                <h3>Percentage Calculator</h3>
+                <p>Calculate percentage from marks obtained and total marks</p>
+            </a>
+
+            <a href="../calculators/cgpa-to-percentage.html" class="calculator-card">
+                <h3>CGPA to Percentage</h3>
+                <p>Convert CGPA to percentage for different universities</p>
+            </a>
+
+            <a href="../calculators/percentage-to-cgpa.html" class="calculator-card">
+                <h3>Percentage to CGPA</h3>
+                <p>Convert percentage marks to CGPA scale</p>
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Calculator Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function searchCalculators() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const grid = document.getElementById('calculatorsGrid');
+            const cards = grid.getElementsByClassName('calculator-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].getElementsByTagName('h3')[0];
+                const desc = cards[i].getElementsByTagName('p')[0];
+                const titleText = title.textContent || title.innerText;
+                const descText = desc.textContent || desc.innerText;
+                
+                if (titleText.toLowerCase().indexOf(filter) > -1 || 
+                    descText.toLowerCase().indexOf(filter) > -1) {
+                    cards[i].style.display = '';
+                } else {
+                    cards[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

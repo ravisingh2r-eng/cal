@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Calculators - Free Online Tools</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/categories.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <h1>🛠️ Utility Calculators</h1>
+            <p class="category-count">18+ Everyday Tools</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search calculators..." onkeyup="searchCalculators()">
+        </div>
+
+        <div class="calculators-grid" id="calculatorsGrid">
+            <a href="../calculators/age-calculator.html" class="calculator-card">
+                <h3>Age Calculator</h3>
+                <p>Calculate exact age in years, months, and days</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/date-calculator.html" class="calculator-card">
+                <h3>Date Calculator</h3>
+                <p>Calculate date differences and add/subtract days</p>
+            </a>
+
+            <a href="../calculators/time-duration-calculator.html" class="calculator-card">
+                <h3>Time Duration Calculator</h3>
+                <p>Calculate time difference and work hours</p>
+            </a>
+
+            <a href="../calculators/percentage-calculator.html" class="calculator-card">
+                <h3>Percentage Calculator</h3>
+                <p>Calculate percentages, increase, decrease, and changes</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/discount-calculator.html" class="calculator-card">
+                <h3>Discount Calculator</h3>
+                <p>Calculate discount amount and final price</p>
+            </a>
+
+            <a href="../calculators/tip-calculator.html" class="calculator-card">
+                <h3>Tip Calculator</h3>
+                <p>Calculate tip amount and split bill among people</p>
+            </a>
+
+            <a href="../calculators/ratio-calculator.html" class="calculator-card">
+                <h3>Ratio Calculator</h3>
+                <p>Calculate and simplify ratios and proportions</p>
+            </a>
+
+            <a href="../calculators/average-calculator.html" class="calculator-card">
+                <h3>Average Calculator</h3>
+                <p>Calculate mean, median, mode, and range</p>
+            </a>
+
+            <a href="../calculators/random-number-generator.html" class="calculator-card">
+                <h3>Random Number Generator</h3>
+                <p>Generate random numbers within specified range</p>
+            </a>
+
+            <a href="../calculators/square-root-calculator.html" class="calculator-card">
+                <h3>Square Root Calculator</h3>
+                <p>Calculate square root and cube root of numbers</p>
+            </a>
+
+            <a href="../calculators/exponent-calculator.html" class="calculator-card">
+                <h3>Exponent Calculator</h3>
+                <p>Calculate powers and exponents of numbers</p>
+            </a>
+
+            <a href="../calculators/fraction-calculator.html" class="calculator-card">
+                <h3>Fraction Calculator</h3>
+                <p>Add, subtract, multiply, and divide fractions</p>
+            </a>
+
+            <a href="../calculators/lcm-calculator.html" class="calculator-card">
+                <h3>LCM Calculator</h3>
+                <p>Calculate Least Common Multiple of numbers</p>
+            </a>
+
+            <a href="../calculators/gcd-calculator.html" class="calculator-card">
+                <h3>GCD Calculator</h3>
+                <p>Calculate Greatest Common Divisor of numbers</p>
+            </a>
+
+            <a href="../calculators/prime-number-checker.html" class="calculator-card">
+                <h3>Prime Number Checker</h3>
+                <p>Check if a number is prime and find prime factors</p>
+            </a>
+
+            <a href="../calculators/factorial-calculator.html" class="calculator-card">
+                <h3>Factorial Calculator</h3>
+                <p>Calculate factorial of numbers</p>
+            </a>
+
+            <a href="../calculators/scientific-calculator.html" class="calculator-card">
+                <h3>Scientific Calculator</h3>
+                <p>Advanced scientific calculator with trigonometric functions</p>
+            </a>
+
+            <a href="../calculators/standard-deviation-calculator.html" class="calculator-card">
+                <h3>Standard Deviation Calculator</h3>
+                <p>Calculate standard deviation and variance</p>
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Calculator Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function searchCalculators() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const grid = document.getElementById('calculatorsGrid');
+            const cards = grid.getElementsByClassName('calculator-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].getElementsByTagName('h3')[0];
+                const desc = cards[i].getElementsByTagName('p')[0];
+                const titleText = title.textContent || title.innerText;
+                const descText = desc.textContent || desc.innerText;
+                
+                if (titleText.toLowerCase().indexOf(filter) > -1 || 
+                    descText.toLowerCase().indexOf(filter) > -1) {
+                    cards[i].style.display = '';
+                } else {
+                    cards[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculators - Free Online Tools</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/categories.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <h1>🏦 Loan Calculators</h1>
+            <p class="category-count">14+ Loan & EMI Calculators</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search calculators..." onkeyup="searchCalculators()">
+        </div>
+
+        <div class="calculators-grid" id="calculatorsGrid">
+            <a href="../calculators/home-loan-calculator.html" class="calculator-card">
+                <h3>Home Loan Calculator</h3>
+                <p>Calculate home loan EMI with amortization and total interest</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/car-loan-calculator.html" class="calculator-card">
+                <h3>Car Loan Calculator</h3>
+                <p>Calculate car loan EMI with insurance and on-road price</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/personal-loan-calculator.html" class="calculator-card">
+                <h3>Personal Loan Calculator</h3>
+                <p>Calculate personal loan EMI with processing fees</p>
+            </a>
+
+            <a href="../calculators/bike-loan-calculator.html" class="calculator-card">
+                <h3>Bike Loan Calculator</h3>
+                <p>Calculate two-wheeler loan EMI with insurance cost</p>
+                <span class="calculator-badge new">New</span>
+            </a>
+
+            <a href="../calculators/emi-calculator.html" class="calculator-card">
+                <h3>EMI Calculator</h3>
+                <p>Universal EMI calculator for any type of loan</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/loan-against-property-calculator.html" class="calculator-card">
+                <h3>Loan Against Property</h3>
+                <p>Calculate LAP EMI with property value and LTV ratio</p>
+            </a>
+
+            <a href="../calculators/education-loan-calculator.html" class="calculator-card">
+                <h3>Education Loan Calculator</h3>
+                <p>Calculate education loan EMI with moratorium period</p>
+            </a>
+
+            <a href="../calculators/business-loan-calculator.html" class="calculator-card">
+                <h3>Business Loan Calculator</h3>
+                <p>Calculate business loan EMI for working capital or expansion</p>
+            </a>
+
+            <a href="../calculators/loan-tenure-calculator.html" class="calculator-card">
+                <h3>Loan Tenure Calculator</h3>
+                <p>Calculate how tenure affects your EMI and total interest</p>
+            </a>
+
+            <a href="../calculators/prepayment-calculator.html" class="calculator-card">
+                <h3>Prepayment Calculator</h3>
+                <p>Calculate savings from prepaying your loan partially</p>
+            </a>
+
+            <a href="../calculators/balance-transfer-calculator.html" class="calculator-card">
+                <h3>Balance Transfer Calculator</h3>
+                <p>Calculate savings from transferring loan to lower interest rate</p>
+                <span class="calculator-badge new">New</span>
+            </a>
+
+            <a href="../calculators/debt-consolidation-calculator.html" class="calculator-card">
+                <h3>Debt Consolidation Calculator</h3>
+                <p>Consolidate multiple debts into single EMI</p>
+                <span class="calculator-badge new">New</span>
+            </a>
+
+            <a href="../calculators/eligibility-calculator.html" class="calculator-card">
+                <h3>Loan Eligibility Calculator</h3>
+                <p>Calculate maximum loan amount based on income</p>
+            </a>
+
+            <a href="../calculators/down-payment-calculator.html" class="calculator-card">
+                <h3>Down Payment Calculator</h3>
+                <p>Calculate down payment needed for home or car purchase</p>
+                <span class="calculator-badge new">New</span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Calculator Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function searchCalculators() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const grid = document.getElementById('calculatorsGrid');
+            const cards = grid.getElementsByClassName('calculator-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].getElementsByTagName('h3')[0];
+                const desc = cards[i].getElementsByTagName('p')[0];
+                const titleText = title.textContent || title.innerText;
+                const descText = desc.textContent || desc.innerText;
+                
+                if (titleText.toLowerCase().indexOf(filter) > -1 || 
+                    descText.toLowerCase().indexOf(filter) > -1) {
+                    cards[i].style.display = '';
+                } else {
+                    cards[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Calculators - Free Online Tools</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/categories.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <h1>💰 Financial Calculators</h1>
+            <p class="category-count">15+ Free Financial Calculation Tools</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search calculators..." onkeyup="searchCalculators()">
+        </div>
+
+        <div class="calculators-grid" id="calculatorsGrid">
+            <a href="../calculators/emi-calculator.html" class="calculator-card">
+                <h3>EMI Calculator</h3>
+                <p>Calculate your Equated Monthly Installment for loans with detailed amortization schedule</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/sip-calculator.html" class="calculator-card">
+                <h3>SIP Calculator</h3>
+                <p>Plan systematic investment in mutual funds with returns projection</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/fd-calculator.html" class="calculator-card">
+                <h3>FD Calculator</h3>
+                <p>Calculate Fixed Deposit returns, maturity amount, and interest earned</p>
+            </a>
+
+            <a href="../calculators/rd-calculator.html" class="calculator-card">
+                <h3>RD Calculator</h3>
+                <p>Calculate Recurring Deposit maturity value with monthly contributions</p>
+            </a>
+
+            <a href="../calculators/lumpsum-calculator.html" class="calculator-card">
+                <h3>Lumpsum Calculator</h3>
+                <p>Calculate returns on one-time investment with CAGR analysis</p>
+            </a>
+
+            <a href="../calculators/compound-interest-calculator.html" class="calculator-card">
+                <h3>Compound Interest Calculator</h3>
+                <p>Calculate compound interest with flexible compounding frequency</p>
+            </a>
+
+            <a href="../calculators/simple-interest-calculator.html" class="calculator-card">
+                <h3>Simple Interest Calculator</h3>
+                <p>Calculate simple interest on principal amount over time</p>
+            </a>
+
+            <a href="../calculators/roi-calculator.html" class="calculator-card">
+                <h3>ROI Calculator</h3>
+                <p>Calculate Return on Investment percentage for any investment</p>
+            </a>
+
+            <a href="../calculators/cagr-calculator.html" class="calculator-card">
+                <h3>CAGR Calculator</h3>
+                <p>Calculate Compound Annual Growth Rate for investments</p>
+            </a>
+
+            <a href="../calculators/invoice-calculator.html" class="calculator-card">
+                <h3>Invoice Calculator</h3>
+                <p>Create professional invoices with GST calculation and discounts</p>
+                <span class="calculator-badge new">New</span>
+            </a>
+
+            <a href="../calculators/fuel-cost-calculator.html" class="calculator-card">
+                <h3>Fuel Cost Calculator</h3>
+                <p>Calculate fuel expenses, mileage, and cost per kilometer</p>
+                <span class="calculator-badge new">New</span>
+            </a>
+
+            <a href="../calculators/payback-period-calculator.html" class="calculator-card">
+                <h3>Payback Period Calculator</h3>
+                <p>Calculate time to recover initial investment with cash flows</p>
+                <span class="calculator-badge new">New</span>
+            </a>
+
+            <a href="../calculators/lease-calculator.html" class="calculator-card">
+                <h3>Lease Calculator</h3>
+                <p>Calculate leasing costs with residual value and total lease cost</p>
+            </a>
+
+            <a href="../calculators/down-payment-calculator.html" class="calculator-card">
+                <h3>Down Payment Calculator</h3>
+                <p>Calculate optimal down payment for home or car purchase</p>
+            </a>
+
+            <a href="../calculators/debt-consolidation-calculator.html" class="calculator-card">
+                <h3>Debt Consolidation Calculator</h3>
+                <p>Analyze multiple debts and consolidation savings</p>
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Calculator Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function searchCalculators() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const grid = document.getElementById('calculatorsGrid');
+            const cards = grid.getElementsByClassName('calculator-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].getElementsByTagName('h3')[0];
+                const desc = cards[i].getElementsByTagName('p')[0];
+                const titleText = title.textContent || title.innerText;
+                const descText = desc.textContent || desc.innerText;
+                
+                if (titleText.toLowerCase().indexOf(filter) > -1 || 
+                    descText.toLowerCase().indexOf(filter) > -1) {
+                    cards[i].style.display = '';
+                } else {
+                    cards[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

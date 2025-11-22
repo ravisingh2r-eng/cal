@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculators - Free Online Tools</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/categories.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <h1>📈 Investment Calculators</h1>
+            <p class="category-count">12+ Investment Planning Tools</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../index.html" class="back-link">← Back to Home</a>
+        
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search calculators..." onkeyup="searchCalculators()">
+        </div>
+
+        <div class="calculators-grid" id="calculatorsGrid">
+            <a href="../calculators/sip-calculator.html" class="calculator-card">
+                <h3>SIP Calculator</h3>
+                <p>Calculate Systematic Investment Plan returns with inflation adjustment</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/mutual-fund-calculator.html" class="calculator-card">
+                <h3>Mutual Fund Calculator</h3>
+                <p>Calculate mutual fund returns with expense ratio and exit load</p>
+                <span class="calculator-badge popular">Popular</span>
+            </a>
+
+            <a href="../calculators/lumpsum-calculator.html" class="calculator-card">
+                <h3>Lumpsum Calculator</h3>
+                <p>Calculate one-time investment returns with CAGR analysis</p>
+            </a>
+
+            <a href="../calculators/stock-calculator.html" class="calculator-card">
+                <h3>Stock Calculator</h3>
+                <p>Calculate stock trading profit/loss with brokerage and taxes</p>
+            </a>
+
+            <a href="../calculators/bitcoin-calculator.html" class="calculator-card">
+                <h3>Bitcoin Calculator</h3>
+                <p>Calculate cryptocurrency investment returns with fees and tax</p>
+                <span class="calculator-badge new">New</span>
+            </a>
+
+            <a href="../calculators/gold-calculator.html" class="calculator-card">
+                <h3>Gold Calculator</h3>
+                <p>Calculate gold price by weight and purity (22K, 24K)</p>
+            </a>
+
+            <a href="../calculators/ppf-calculator.html" class="calculator-card">
+                <h3>PPF Calculator</h3>
+                <p>Calculate Public Provident Fund maturity with 15-year lock-in</p>
+            </a>
+
+            <a href="../calculators/epf-calculator.html" class="calculator-card">
+                <h3>EPF Calculator</h3>
+                <p>Calculate Employee Provident Fund with VPF and year-wise breakdown</p>
+                <span class="calculator-badge new">New</span>
+            </a>
+
+            <a href="../calculators/nps-calculator.html" class="calculator-card">
+                <h3>NPS Calculator</h3>
+                <p>Calculate National Pension System returns with annuity options</p>
+            </a>
+
+            <a href="../calculators/elss-calculator.html" class="calculator-card">
+                <h3>ELSS Calculator</h3>
+                <p>Calculate ELSS mutual fund returns with tax benefits under 80C</p>
+                <span class="calculator-badge new">New</span>
+            </a>
+
+            <a href="../calculators/cagr-calculator.html" class="calculator-card">
+                <h3>CAGR Calculator</h3>
+                <p>Calculate Compound Annual Growth Rate for any investment</p>
+            </a>
+
+            <a href="../calculators/roi-calculator.html" class="calculator-card">
+                <h3>ROI Calculator</h3>
+                <p>Calculate Return on Investment percentage and absolute gains</p>
+            </a>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Calculator Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function searchCalculators() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const grid = document.getElementById('calculatorsGrid');
+            const cards = grid.getElementsByClassName('calculator-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                const title = cards[i].getElementsByTagName('h3')[0];
+                const desc = cards[i].getElementsByTagName('p')[0];
+                const titleText = title.textContent || title.innerText;
+                const descText = desc.textContent || desc.innerText;
+                
+                if (titleText.toLowerCase().indexOf(filter) > -1 || 
+                    descText.toLowerCase().indexOf(filter) > -1) {
+                    cards[i].style.display = '';
+                } else {
+                    cards[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
