@@ -1,0 +1,70 @@
+/**
+ * Search Functionality for Category Pages
+ * Filters calculator cards based on search input
+ */
+
+(function() {
+    'use strict';
+
+    function init() {
+        const searchBox = document.getElementById('calculatorSearch');
+        if (!searchBox) return;
+
+        searchBox.addEventListener('input', handleSearch);
+        searchBox.addEventListener('keyup', handleSearch);
+    }
+
+    function handleSearch(e) {
+        const searchTerm = e.target.value.toLowerCase().trim();
+        const calculatorCards = document.querySelectorAll('.calculator-card');
+        let visibleCount = 0;
+
+        calculatorCards.forEach(function(card) {
+            const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+            const description = card.querySelector('p')?.textContent.toLowerCase() || '';
+            const searchText = title + ' ' + description;
+
+            if (searchText.includes(searchTerm)) {
+                card.style.display = '';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Show no results message
+        let noResults = document.getElementById('noSearchResults');
+        if (visibleCount === 0 && searchTerm !== '') {
+            if (!noResults) {
+                noResults = document.createElement('div');
+                noResults.id = 'noSearchResults';
+                noResults.style.cssText = 'text-align: center; padding: 3rem; color: #6b7280;';
+                noResults.innerHTML = '<h3>No calculators found</h3><p>Try different keywords or <a href="#" onclick="document.getElementById(\'calculatorSearch\').value=\'\'; document.getElementById(\'calculatorSearch\').dispatchEvent(new Event(\'input\')); return false;">clear search</a></p>';
+                
+                const grid = document.querySelector('.calculator-grid');
+                if (grid && grid.parentNode) {
+                    grid.parentNode.insertBefore(noResults, grid.nextSibling);
+                }
+            }
+            noResults.style.display = 'block';
+        } else if (noResults) {
+            noResults.style.display = 'none';
+        }
+
+        // Track search
+        if (searchTerm && typeof gtag === 'function') {
+            gtag('event', 'search', {
+                'search_term': searchTerm,
+                'results_count': visibleCount
+            });
+        }
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+
+})();
