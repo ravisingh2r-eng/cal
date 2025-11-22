@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Calculator Platform</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+        }
+        .error-content {
+            text-align: center;
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            max-width: 600px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: bold;
+            color: #3b82f6;
+            margin: 0;
+            line-height: 1;
+        }
+        .error-title {
+            font-size: 2rem;
+            color: #1f2937;
+            margin: 1rem 0;
+        }
+        .error-message {
+            font-size: 1.1rem;
+            color: #6b7280;
+            margin-bottom: 2rem;
+        }
+        .error-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .error-btn {
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+        }
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-content">
+            <h1 class="error-code">404</h1>
+            <h2 class="error-title">Page Not Found</h2>
+            <p class="error-message">
+                Oops! The page you're looking for doesn't exist. It might have been moved or deleted.
+            </p>
+            <div class="error-actions">
+                <a href="index.html" class="error-btn btn-primary">Go to Homepage</a>
+                <a href="categories/financial.html" class="error-btn btn-secondary">Browse Calculators</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
