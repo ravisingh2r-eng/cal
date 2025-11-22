@@ -1,0 +1,157 @@
+/* ========================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ======================================== */
+
+/* Tablets and below (768px) */
+@media (max-width: 768px) {
+    /* Typography */
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    /* Header */
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-primary);
+        box-shadow: var(--shadow-lg);
+        padding: 16px;
+    }
+
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 40px 0;
+    }
+
+    /* Calculator Grid */
+    .calculator-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Content Grid */
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 16px;
+    }
+
+    /* SEO Content */
+    .seo-content {
+        padding: 24px 16px;
+    }
+}
+
+/* Mobile phones (480px) */
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .hero-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    .logo img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .btn-large {
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+
+    .calculator-card {
+        padding: 16px;
+    }
+
+    .card-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .card-icon img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* Large screens (1440px+) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .calculator-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .calculator-card:hover {
+        transform: none;
+    }
+
+    .btn-primary:hover {
+        transform: none;
+    }
+}
+
+/* Landscape mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 24px 0;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.875rem;
+        margin-bottom: 16px;
+    }
+}

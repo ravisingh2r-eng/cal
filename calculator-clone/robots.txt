@@ -1,0 +1,55 @@
+# robots.txt for Calculator Platform
+# Optimized for search engine crawling
+
+User-agent: *
+Allow: /
+Allow: /calculators/
+Allow: /css/
+Allow: /js/
+Allow: /assets/
+
+# Disallow admin and config areas
+Disallow: /api/
+Disallow: /config/
+Disallow: /lib/
+
+# Disallow search results
+Disallow: /search
+Disallow: /*?search=
+
+# Allow all calculators
+Allow: /calculators/*.html
+
+# Sitemap location
+Sitemap: https://www.calculator.com/sitemap.xml
+
+# Crawl delay (optional - adjust as needed)
+# Crawl-delay: 1
+
+# Specific bot instructions
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Block ad fraud bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Google AdSense bot
+User-agent: Mediapartners-Google
+Allow: /

@@ -1,0 +1,74 @@
+/* ========================================
+   DARK THEME
+   ======================================== */
+[data-theme="dark"] {
+    --text-primary: #F9FAFB;
+    --text-secondary: #D1D5DB;
+    --text-muted: #9CA3AF;
+
+    --bg-primary: #1F2937;
+    --bg-secondary: #111827;
+    --bg-tertiary: #374151;
+
+    --border-color: #374151;
+
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .hero {
+    background: linear-gradient(135deg, #4338CA 0%, #312E81 100%);
+}
+
+[data-theme="dark"] .footer {
+    background-color: #111827;
+}
+
+[data-theme="dark"] .search-input {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .breadcrumb {
+    background-color: var(--bg-tertiary);
+}
+
+[data-theme="dark"] .calculator-card {
+    background-color: var(--bg-primary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .card-icon {
+    background-color: var(--bg-tertiary);
+}
+
+/* Theme toggle icons */
+[data-theme="dark"] .sun-icon {
+    display: none;
+}
+
+[data-theme="dark"] .moon-icon {
+    display: block !important;
+}
+
+[data-theme="light"] .moon-icon {
+    display: none;
+}
+
+[data-theme="light"] .sun-icon {
+    display: block;
+}
+
+/* Smooth theme transition */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.calculator-card,
+.search-input,
+.breadcrumb,
+.header {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}

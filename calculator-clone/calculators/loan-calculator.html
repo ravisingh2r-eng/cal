@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator - Calculate Personal, Home & Car Loan EMI</title>
+    <meta name="description" content="Free loan calculator for personal loans, home loans, car loans. Calculate EMI, interest, total payment with amortization.">
+    <meta name="keywords" content="loan calculator, personal loan, home loan, car loan, instant loan, loan emi">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/calculators.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><a href="/">Calculator Platform</a></div>
+        </div>
+    </header>
+
+    <main class="calculator-page">
+        <div class="container">
+            <h1>Loan Calculator</h1>
+            <div class="calculator-card">
+                <select id="loanType" class="calc-input">
+                    <option value="personal">Personal Loan</option>
+                    <option value="home">Home Loan</option>
+                    <option value="car">Car Loan</option>
+                </select>
+                <div class="calc-input-group">
+                    <label>Loan Amount</label>
+                    <input type="number" id="loanAmount" class="calc-input">
+                </div>
+                <div class="calc-input-group">
+                    <label>Interest Rate (%)</label>
+                    <input type="number" id="interestRate" class="calc-input">
+                </div>
+                <div class="calc-input-group">
+                    <label>Tenure (Years)</label>
+                    <input type="number" id="tenure" class="calc-input">
+                </div>
+                <button id="calculate" class="btn btn-primary">Calculate</button>
+                <div id="results" class="results-card" style="display:none;"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/calculators/loan-calc.js"></script>
+</body>
+</html>

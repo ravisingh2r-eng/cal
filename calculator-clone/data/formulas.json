@@ -1,0 +1,146 @@
+{
+  "financial": {
+    "emi": {
+      "name": "Equated Monthly Installment",
+      "formula": "EMI = [P x R x (1+R)^N] / [(1+R)^N-1]",
+      "variables": {
+        "P": "Principal loan amount",
+        "R": "Monthly interest rate (Annual rate / 12 / 100)",
+        "N": "Loan tenure in months"
+      },
+      "example": {
+        "P": 1000000,
+        "annual_rate": 8.5,
+        "tenure_years": 20,
+        "result": "EMI = ₹8,678"
+      }
+    },
+    "simple_interest": {
+      "name": "Simple Interest",
+      "formula": "SI = (P × R × T) / 100",
+      "variables": {
+        "P": "Principal amount",
+        "R": "Rate of interest per annum",
+        "T": "Time period in years"
+      }
+    },
+    "compound_interest": {
+      "name": "Compound Interest",
+      "formula": "A = P(1 + r/n)^(nt)",
+      "variables": {
+        "A": "Final amount",
+        "P": "Principal amount",
+        "r": "Annual interest rate (decimal)",
+        "n": "Number of times interest is compounded per year",
+        "t": "Time in years"
+      }
+    },
+    "sip": {
+      "name": "SIP Future Value",
+      "formula": "FV = P × {[(1 + r)^n - 1] / r} × (1 + r)",
+      "variables": {
+        "FV": "Future Value",
+        "P": "Monthly investment",
+        "r": "Expected monthly return rate",
+        "n": "Number of months"
+      }
+    },
+    "fd": {
+      "name": "Fixed Deposit Maturity",
+      "formula": "A = P(1 + r/n)^(nt)",
+      "variables": {
+        "A": "Maturity amount",
+        "P": "Principal deposit",
+        "r": "Annual interest rate",
+        "n": "Compounding frequency per year",
+        "t": "Tenure in years"
+      }
+    },
+    "rd": {
+      "name": "Recurring Deposit Maturity",
+      "formula": "M = P × n × (n + 1) × (r / 2) / 12",
+      "variables": {
+        "M": "Maturity amount",
+        "P": "Monthly installment",
+        "n": "Number of months",
+        "r": "Annual interest rate"
+      }
+    },
+    "gst": {
+      "name": "GST Calculation",
+      "formulas": {
+        "add_gst": "Total = Amount + (Amount × GST_Rate / 100)",
+        "remove_gst": "Original = Amount / (1 + GST_Rate / 100)"
+      },
+      "variables": {
+        "Amount": "Base amount or total amount",
+        "GST_Rate": "GST rate percentage (5%, 12%, 18%, 28%)"
+      }
+    }
+  },
+  "health": {
+    "bmi": {
+      "name": "Body Mass Index",
+      "formula": "BMI = weight (kg) / [height (m)]²",
+      "imperial_formula": "BMI = (weight (lbs) / [height (in)]²) × 703",
+      "categories": {
+        "underweight": "< 18.5",
+        "normal": "18.5 - 24.9",
+        "overweight": "25.0 - 29.9",
+        "obese": "≥ 30.0"
+      }
+    },
+    "bmr": {
+      "name": "Basal Metabolic Rate",
+      "formulas": {
+        "male": "BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age + 5",
+        "female": "BMR = 10 × weight(kg) + 6.25 × height(cm) - 5 × age - 161"
+      }
+    },
+    "calorie": {
+      "name": "Daily Calorie Needs",
+      "formula": "Calories = BMR × Activity_Factor",
+      "activity_factors": {
+        "sedentary": 1.2,
+        "lightly_active": 1.375,
+        "moderately_active": 1.55,
+        "very_active": 1.725,
+        "extra_active": 1.9
+      }
+    }
+  },
+  "mathematical": {
+    "percentage": {
+      "name": "Percentage Calculation",
+      "formulas": {
+        "percentage_of": "(Part / Whole) × 100",
+        "increase": "((New - Old) / Old) × 100",
+        "decrease": "((Old - New) / Old) × 100"
+      }
+    },
+    "discount": {
+      "name": "Discount Calculation",
+      "formulas": {
+        "discount_amount": "Original_Price × (Discount_% / 100)",
+        "final_price": "Original_Price - Discount_Amount",
+        "percentage_paid": "(Final_Price / Original_Price) × 100"
+      }
+    }
+  },
+  "conversions": {
+    "temperature": {
+      "celsius_to_fahrenheit": "(C × 9/5) + 32",
+      "fahrenheit_to_celsius": "(F - 32) × 5/9",
+      "celsius_to_kelvin": "C + 273.15"
+    },
+    "length": {
+      "meters_to_feet": "m × 3.28084",
+      "kilometers_to_miles": "km × 0.621371",
+      "inches_to_cm": "in × 2.54"
+    },
+    "weight": {
+      "kg_to_pounds": "kg × 2.20462",
+      "pounds_to_kg": "lbs × 0.453592"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>{{CALCULATOR_NAME}} - Free Online Calculator</title>
+    <meta name="description" content="Free {{CALCULATOR_NAME}}. {{DESCRIPTION}}">
+    <meta name="keywords" content="{{KEYWORDS}}">
+    <link rel="canonical" href="https://www.calculator.com/calculators/{{URL_SLUG}}.html">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/calculators.css">
+    <link rel="stylesheet" href="/css/ads.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/"><img src="/assets/images/logo.svg" alt="Logo"></a>
+                    <h1><a href="/">Calculator Platform</a></h1>
+                </div>
+                <button id="themeToggle" class="theme-toggle"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li>{{CALCULATOR_NAME}}</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="calculator-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>{{CALCULATOR_NAME}}</h1>
+                <p>{{DESCRIPTION}}</p>
+            </div>
+
+            <!-- Top Ad -->
+            <div class="ad-container ad-top">
+                <div class="ad-label">Advertisement</div>
+                <div id="ad-slot-top" class="ad-slot"></div>
+            </div>
+
+            <div class="calculator-layout">
+                <div class="calculator-main">
+                    <div class="calculator-card">
+                        <!-- Calculator inputs go here -->
+                        <div id="calculatorInputs"></div>
+
+                        <button id="calculate" class="btn btn-primary btn-large">Calculate</button>
+                        <button id="reset" class="btn btn-secondary">Reset</button>
+
+                        <!-- Results -->
+                        <div id="results" class="results-card" style="display:none;"></div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="calculator-sidebar">
+                    <div class="ad-container ad-sidebar">
+                        <div class="ad-label">Advertisement</div>
+                        <div id="ad-slot-sidebar" class="ad-slot"></div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Calculators</h3>
+                        <ul class="related-links">
+                            <!-- Related calculator links -->
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- Bottom Ad -->
+            <div class="ad-container ad-bottom">
+                <div class="ad-label">Advertisement</div>
+                <div id="ad-slot-bottom" class="ad-slot"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Calculator Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/js/app.js"></script>
+    <script src="/js/theme-switcher.js"></script>
+    <script src="/js/ad-manager.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/calculators/{{CALCULATOR_JS}}"></script>
+</body>
+</html>

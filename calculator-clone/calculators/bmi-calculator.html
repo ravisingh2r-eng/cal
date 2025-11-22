@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator - Calculate Your Body Mass Index | Free Health Tool</title>
+    <meta name="description" content="Free BMI Calculator to calculate your Body Mass Index. Check if you are underweight, normal, overweight or obese. Supports metric and imperial units.">
+    <meta name="keywords" content="bmi calculator, body mass index, bmi chart, weight calculator, health calculator">
+    <link rel="canonical" href="https://www.calculator.com/calculators/bmi-calculator.html">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="/css/calculators.css">
+    <link rel="stylesheet" href="/css/ads.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="/"><img src="/assets/images/logo.svg" alt="Logo"></a>
+                    <h1><a href="/">Calculator Platform</a></h1>
+                </div>
+                <button id="themeToggle" class="theme-toggle"></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="calculator-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>BMI Calculator</h1>
+                <p>Calculate your Body Mass Index and understand your health category</p>
+            </div>
+
+            <div class="ad-container ad-top">
+                <div class="ad-label">Advertisement</div>
+                <div id="ad-slot-top" class="ad-slot"></div>
+            </div>
+
+            <div class="calculator-layout">
+                <div class="calculator-main">
+                    <div class="calculator-card">
+                        <h2>Calculate Your BMI</h2>
+
+                        <div class="unit-toggle">
+                            <button class="unit-btn active" data-unit="metric">Metric</button>
+                            <button class="unit-btn" data-unit="imperial">Imperial</button>
+                        </div>
+
+                        <div id="metricInputs" class="unit-inputs">
+                            <div class="calc-input-group">
+                                <label for="heightCm">Height (cm)</label>
+                                <input type="number" id="heightCm" class="calc-input" placeholder="170" value="170">
+                            </div>
+
+                            <div class="calc-input-group">
+                                <label for="weightKg">Weight (kg)</label>
+                                <input type="number" id="weightKg" class="calc-input" placeholder="70" value="70">
+                            </div>
+                        </div>
+
+                        <div id="imperialInputs" class="unit-inputs" style="display:none;">
+                            <div class="calc-input-group">
+                                <label for="heightFt">Height</label>
+                                <div class="input-row">
+                                    <input type="number" id="heightFt" class="calc-input" placeholder="5" style="width:48%;">
+                                    <span>ft</span>
+                                    <input type="number" id="heightIn" class="calc-input" placeholder="7" style="width:48%;">
+                                    <span>in</span>
+                                </div>
+                            </div>
+
+                            <div class="calc-input-group">
+                                <label for="weightLbs">Weight (lbs)</label>
+                                <input type="number" id="weightLbs" class="calc-input" placeholder="154">
+                            </div>
+                        </div>
+
+                        <div class="calc-input-group">
+                            <label for="age">Age (optional)</label>
+                            <input type="number" id="age" class="calc-input" placeholder="25">
+                        </div>
+
+                        <div class="calc-input-group">
+                            <label>Gender (optional)</label>
+                            <div class="gender-buttons">
+                                <button class="gender-btn" data-gender="male">Male</button>
+                                <button class="gender-btn" data-gender="female">Female</button>
+                            </div>
+                        </div>
+
+                        <button id="calculateBMI" class="btn btn-primary btn-large">Calculate BMI</button>
+                        <button id="resetBMI" class="btn btn-secondary">Reset</button>
+
+                        <div class="results-card" id="bmiResults" style="display:none;">
+                            <div class="result-item main-result">
+                                <span class="result-label">Your BMI</span>
+                                <span class="result-value" id="bmiValue">0</span>
+                            </div>
+
+                            <div class="bmi-category" id="bmiCategory">
+                                <span class="category-label">Category:</span>
+                                <span class="category-value" id="categoryValue"></span>
+                            </div>
+
+                            <div class="bmi-chart">
+                                <div class="bmi-bar">
+                                    <div class="bmi-indicator" id="bmiIndicator"></div>
+                                </div>
+                                <div class="bmi-labels">
+                                    <span class="underweight">Underweight</span>
+                                    <span class="normal">Normal</span>
+                                    <span class="overweight">Overweight</span>
+                                    <span class="obese">Obese</span>
+                                </div>
+                            </div>
+
+                            <div class="bmi-info" id="bmiInfo"></div>
+
+                            <div class="ideal-weight" id="idealWeight">
+                                <h3>Healthy Weight Range</h3>
+                                <p id="weightRange"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="calculator-sidebar">
+                    <div class="ad-container ad-sidebar">
+                        <div class="ad-label">Advertisement</div>
+                        <div id="ad-slot-sidebar" class="ad-slot"></div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>BMI Categories</h3>
+                        <table class="bmi-table">
+                            <tr><td>Below 18.5</td><td class="underweight">Underweight</td></tr>
+                            <tr><td>18.5 - 24.9</td><td class="normal">Normal</td></tr>
+                            <tr><td>25.0 - 29.9</td><td class="overweight">Overweight</td></tr>
+                            <tr><td>30.0 and above</td><td class="obese">Obese</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Related Calculators</h3>
+                        <ul class="related-links">
+                            <li><a href="/calculators/calorie-calculator.html">Calorie Calculator</a></li>
+                            <li><a href="/calculators/age-calculator.html">Age Calculator</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+
+            <section class="content-section">
+                <h2>What is BMI?</h2>
+                <p>Body Mass Index (BMI) is a measure of body fat based on height and weight that applies to adult men and women. It's a screening tool to identify possible weight problems.</p>
+
+                <h2>BMI Calculation Formula</h2>
+                <div class="formula-box">
+                    <p><strong>Metric:</strong> BMI = weight (kg) / [height (m)]²</p>
+                    <p><strong>Imperial:</strong> BMI = (weight (lbs) / [height (in)]²) × 703</p>
+                </div>
+
+                <h2>Understanding Your BMI</h2>
+                <ul>
+                    <li><strong>Underweight (BMI &lt; 18.5):</strong> May indicate malnutrition, eating disorder, or other health problems</li>
+                    <li><strong>Normal (BMI 18.5-24.9):</strong> Indicates healthy weight for your height</li>
+                    <li><strong>Overweight (BMI 25-29.9):</strong> May indicate you are overweight and should consider weight loss</li>
+                    <li><strong>Obese (BMI ≥ 30):</strong> Indicates obesity and increased health risks</li>
+                </ul>
+
+                <h2>Limitations of BMI</h2>
+                <p>BMI is a useful screening tool but it has limitations. It doesn't account for:</p>
+                <ul>
+                    <li>Muscle mass - athletes may have high BMI but low body fat</li>
+                    <li>Bone density</li>
+                    <li>Overall body composition</li>
+                    <li>Racial and sex differences</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Calculator Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/theme-switcher.js"></script>
+    <script src="/js/ad-manager.js"></script>
+    <script src="/js/calculators/bmi-calc.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+{
+  "high_cpc_keywords": {
+    "emi-calculator": {
+      "keywords": [
+        "personal loan",
+        "instant loan",
+        "home loan emi",
+        "car loan emi",
+        "loan apply online",
+        "quick loan approval",
+        "best loan rates",
+        "loan eligibility",
+        "instant approval loan",
+        "low interest loan"
+      ],
+      "average_cpc": "$8-15"
+    },
+    "loan-calculator": {
+      "keywords": [
+        "instant personal loan",
+        "online loan",
+        "quick loan",
+        "loan approval",
+        "best loan offers",
+        "low interest loan",
+        "personal loan online apply",
+        "home loan calculator"
+      ],
+      "average_cpc": "$7-12"
+    },
+    "gst-calculator": {
+      "keywords": [
+        "gst registration",
+        "gst software",
+        "business loan",
+        "accounting software",
+        "tax filing",
+        "gst compliance",
+        "online accounting",
+        "business tax"
+      ],
+      "average_cpc": "$5-10"
+    },
+    "income-tax-calculator": {
+      "keywords": [
+        "income tax",
+        "tax saving",
+        "tax planning",
+        "tax filing online",
+        "investment plans",
+        "tax calculator india",
+        "tax refund",
+        "tax consultant"
+      ],
+      "average_cpc": "$6-12"
+    },
+    "sip-calculator": {
+      "keywords": [
+        "mutual funds",
+        "sip investment",
+        "wealth management",
+        "investment advisor",
+        "best mutual funds",
+        "sip plans",
+        "mutual fund investment",
+        "online investment"
+      ],
+      "average_cpc": "$7-14"
+    },
+    "bmi-calculator": {
+      "keywords": [
+        "weight loss",
+        "fitness",
+        "health insurance",
+        "diet plans",
+        "gym membership",
+        "nutrition",
+        "weight management",
+        "online fitness program"
+      ],
+      "average_cpc": "$4-9"
+    }
+  },
+  "long_tail_keywords": {
+    "emi-calculator": [
+      "how to calculate emi for home loan",
+      "emi calculator with prepayment",
+      "best home loan emi rates",
+      "car loan emi calculator india"
+    ],
+    "gst-calculator": [
+      "how to calculate gst on invoice",
+      "gst inclusive calculator online",
+      "reverse gst calculator"
+    ],
+    "bmi-calculator": [
+      "how to calculate bmi manually",
+      "ideal bmi for men and women",
+      "bmi calculator with age"
+    ]
+  },
+  "related_searches": {
+    "emi-calculator": [
+      "loan calculator",
+      "home loan interest rate",
+      "emi formula",
+      "loan eligibility calculator"
+    ],
+    "gst-calculator": [
+      "gst rate list",
+      "hsn code finder",
+      "income tax calculator"
+    ],
+    "bmi-calculator": [
+      "ideal weight calculator",
+      "body fat calculator",
+      "calorie calculator"
+    ]
+  }
+}

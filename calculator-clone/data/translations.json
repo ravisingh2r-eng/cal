@@ -1,0 +1,87 @@
+{
+  "en": {
+    "common": {
+      "calculator": "Calculator",
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "share": "Share",
+      "print": "Print",
+      "download": "Download",
+      "copy": "Copy",
+      "history": "History",
+      "clear_history": "Clear History",
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "messages": {
+      "copied": "Copied to clipboard!",
+      "error_invalid_input": "Please enter valid values",
+      "error_required": "This field is required",
+      "success_calculation": "Calculation completed successfully"
+    },
+    "categories": {
+      "financial": "Financial Calculators",
+      "scientific": "Scientific Calculators",
+      "health": "Health Calculators",
+      "converters": "Converters"
+    }
+  },
+  "hi": {
+    "common": {
+      "calculator": "कैलकुलेटर",
+      "calculate": "गणना करें",
+      "reset": "रीसेट करें",
+      "result": "परिणाम",
+      "share": "शेयर करें",
+      "print": "प्रिंट करें",
+      "download": "डाउनलोड करें",
+      "copy": "कॉपी करें",
+      "history": "इतिहास",
+      "clear_history": "इतिहास साफ करें",
+      "home": "होम",
+      "about": "हमारे बारे में",
+      "contact": "संपर्क करें"
+    },
+    "messages": {
+      "copied": "क्लिपबोर्ड पर कॉपी किया गया!",
+      "error_invalid_input": "कृपया मान्य मान दर्ज करें",
+      "error_required": "यह फ़ील्ड आवश्यक है",
+      "success_calculation": "गणना सफलतापूर्वक पूर्ण हुई"
+    },
+    "categories": {
+      "financial": "वित्तीय कैलकुलेटर",
+      "scientific": "वैज्ञानिक कैलकुलेटर",
+      "health": "स्वास्थ्य कैलकुलेटर",
+      "converters": "कन्वर्टर"
+    },
+    "emi": {
+      "title": "ईएमआई कैलकुलेटर",
+      "loan_amount": "लोन राशि",
+      "interest_rate": "ब्याज दर",
+      "tenure": "अवधि",
+      "monthly_emi": "मासिक ईएमआई",
+      "total_interest": "कुल ब्याज",
+      "total_amount": "कुल राशि"
+    },
+    "gst": {
+      "title": "जीएसटी कैलकुलेटर",
+      "amount": "राशि",
+      "gst_rate": "जीएसटी दर",
+      "add_gst": "जीएसटी जोड़ें",
+      "remove_gst": "जीएसटी हटाएं"
+    },
+    "bmi": {
+      "title": "बीएमआई कैलकुलेटर",
+      "height": "ऊंचाई",
+      "weight": "वजन",
+      "age": "उम्र",
+      "your_bmi": "आपका बीएमआई",
+      "underweight": "कम वजन",
+      "normal": "सामान्य",
+      "overweight": "अधिक वजन",
+      "obese": "मोटापा"
+    }
+  }
+}

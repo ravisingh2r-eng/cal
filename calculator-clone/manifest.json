@@ -1,0 +1,80 @@
+{
+  "name": "Calculator Platform - Free Online Calculators",
+  "short_name": "Calculator",
+  "description": "Free online calculators for financial, scientific, health calculations and more",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#4F46E5",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/assets/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "utilities",
+    "finance",
+    "productivity"
+  ],
+  "shortcuts": [
+    {
+      "name": "EMI Calculator",
+      "short_name": "EMI",
+      "description": "Calculate loan EMI",
+      "url": "/calculators/emi-calculator.html",
+      "icons": [
+        {
+          "src": "/assets/images/calculator-icons/emi.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "GST Calculator",
+      "short_name": "GST",
+      "description": "Calculate GST",
+      "url": "/calculators/gst-calculator.html",
+      "icons": [
+        {
+          "src": "/assets/images/calculator-icons/gst.svg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "BMI Calculator",
+      "short_name": "BMI",
+      "description": "Calculate BMI",
+      "url": "/calculators/bmi-calculator.html",
+      "icons": [
+        {
+          "src": "/assets/images/calculator-icons/bmi.svg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/images/screenshot-1.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg"
+    }
+  ]
+}
