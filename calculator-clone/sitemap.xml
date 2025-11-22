@@ -10,6 +10,20 @@
     </url>
 
     <url>
+        <loc>https://www.calculator.com/calculators/80c-tax-saving-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/advance-tax-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.calculator.com/calculators/age-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
@@ -38,7 +52,35 @@
     </url>
 
     <url>
+        <loc>https://www.calculator.com/calculators/baby-growth-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/balance-transfer-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.calculator.com/calculators/basic-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/bike-loan-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/bitcoin-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -54,7 +96,7 @@
     <url>
         <loc>https://www.calculator.com/calculators/bmi-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
 
@@ -80,6 +122,27 @@
     </url>
 
     <url>
+        <loc>https://www.calculator.com/calculators/break-even-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/business-loan-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/cagr-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.calculator.com/calculators/calorie-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
@@ -87,7 +150,84 @@
     </url>
 
     <url>
+        <loc>https://www.calculator.com/calculators/capital-gains-tax-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/car-insurance-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/car-lease-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/car-loan-emi-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/child-education-planning-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.calculator.com/calculators/compound-interest-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/conception-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/credit-card-emi-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/credit-score-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/crypto-profit-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/crypto-sip-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/crypto-tax-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -115,7 +255,49 @@
     </url>
 
     <url>
+        <loc>https://www.calculator.com/calculators/debt-consolidation-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/debt-payoff-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.calculator.com/calculators/discount-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/dividend-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/down-payment-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/education-loan-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/elss-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -124,7 +306,7 @@
     <url>
         <loc>https://www.calculator.com/calculators/emi-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
 
@@ -158,6 +340,13 @@
 
     <url>
         <loc>https://www.calculator.com/calculators/fraction-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/freelancer-income-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -208,8 +397,15 @@
     <url>
         <loc>https://www.calculator.com/calculators/gst-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/health-insurance-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
     </url>
 
     <url>
@@ -217,6 +413,20 @@
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/home-affordability-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/home-loan-eligibility-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
     </url>
 
     <url>
@@ -236,12 +446,26 @@
     <url>
         <loc>https://www.calculator.com/calculators/income-tax-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://www.calculator.com/calculators/inflation-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/invoice-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/ivf-success-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -255,9 +479,16 @@
     </url>
 
     <url>
+        <loc>https://www.calculator.com/calculators/life-insurance-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <url>
         <loc>https://www.calculator.com/calculators/loan-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
 
@@ -269,7 +500,28 @@
     </url>
 
     <url>
+        <loc>https://www.calculator.com/calculators/lumpsum-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.calculator.com/calculators/margin-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/mileage-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/minimum-payment-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -290,6 +542,13 @@
     </url>
 
     <url>
+        <loc>https://www.calculator.com/calculators/mutual-fund-return-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.calculator.com/calculators/nps-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
@@ -298,6 +557,13 @@
 
     <url>
         <loc>https://www.calculator.com/calculators/npv-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/old-vs-new-tax-regime-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -332,6 +598,13 @@
     </url>
 
     <url>
+        <loc>https://www.calculator.com/calculators/portfolio-rebalancing-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.calculator.com/calculators/power-converter.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
@@ -360,6 +633,34 @@
     </url>
 
     <url>
+        <loc>https://www.calculator.com/calculators/professional-tax-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/profit-margin-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/property-tax-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/property-valuation-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.calculator.com/calculators/protein-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
@@ -375,6 +676,13 @@
 
     <url>
         <loc>https://www.calculator.com/calculators/rd-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/rental-yield-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -402,7 +710,21 @@
     </url>
 
     <url>
+        <loc>https://www.calculator.com/calculators/scholarship-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.calculator.com/calculators/scientific-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/section-80d-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -418,7 +740,7 @@
     <url>
         <loc>https://www.calculator.com/calculators/sip-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
 
@@ -431,6 +753,20 @@
 
     <url>
         <loc>https://www.calculator.com/calculators/square-root-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/stamp-duty-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/startup-cost-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -451,10 +787,38 @@
     </url>
 
     <url>
+        <loc>https://www.calculator.com/calculators/stock-return-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/student-loan-emi-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/study-abroad-cost-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
         <loc>https://www.calculator.com/calculators/tds-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/term-insurance-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
     </url>
 
     <url>
@@ -479,7 +843,21 @@
     </url>
 
     <url>
+        <loc>https://www.calculator.com/calculators/two-wheeler-insurance-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
+    </url>
+
+    <url>
         <loc>https://www.calculator.com/calculators/unit-converter.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/vehicle-depreciation-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -494,6 +872,13 @@
 
     <url>
         <loc>https://www.calculator.com/calculators/water-intake-calculator.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.calculator.com/calculators/working-capital-calculator.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
