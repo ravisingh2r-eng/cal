@@ -1,471 +1,583 @@
 /**
- * Percentage Calculator
- * High-CPC calculator optimized for revenue
+ * Enhanced Percentage Calculator - Modern Design
+ * Features: Multiple calculation modes, visual percentage representation
  */
 
 (function() {
     'use strict';
 
+    let calcMode = 'basic';
+
     function init() {
+        createCalculatorInterface();
         setupEventListeners();
-        createInputFields();
-        loadAffiliateOffers();
     }
 
-    function setupEventListeners() {
-        const calculateBtn = document.getElementById('calculate');
-        if (calculateBtn) {
-            calculateBtn.addEventListener('click', calculate);
-        }
-
-        document.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') calculate();
-        });
-
-        // Dynamic calculation mode switching
-        document.addEventListener('change', function(e) {
-            if (e.target && e.target.id === 'calculationMode') {
-                updateInputFields(e.target.value);
-            }
-        });
-    }
-
-    function createInputFields() {
+    function createCalculatorInterface() {
         const container = document.getElementById('calculatorInputs');
         if (!container) return;
 
         container.innerHTML = `
-            <div class="calc-input-group">
-                <label>Calculation Type</label>
-                <select class="calc-input" id="calculationMode">
-                    <option value="basic">What is X% of Y?</option>
-                    <option value="percent">What % is X of Y?</option>
-                    <option value="whole">X is Y% of what?</option>
-                    <option value="increase">Percentage Increase</option>
-                    <option value="decrease">Percentage Decrease</option>
-                    <option value="change">Percentage Change</option>
-                    <option value="difference">Percentage Difference</option>
-                </select>
+            <div class="percentage-calculator-container">
+                <!-- Calculation Mode Selection -->
+                <div class="calc-input-group">
+                    <label for="calculationMode">Calculation Type</label>
+                    <select class="calc-input calc-mode-select" id="calculationMode">
+                        <option value="basic">What is X% of Y?</option>
+                        <option value="percent">What % is X of Y?</option>
+                        <option value="whole">X is Y% of what?</option>
+                        <option value="increase">Percentage Increase</option>
+                        <option value="decrease">Percentage Decrease</option>
+                        <option value="change">Percentage Change</option>
+                        <option value="difference">Percentage Difference</option>
+                    </select>
+                </div>
+
+                <!-- Input Fields (Dynamic based on mode) -->
+                <div id="inputFields"></div>
+
+                <!-- Calculate Button -->
+                <button type="button" class="btn btn-primary btn-large" id="calculateBtn">
+                    <span>Calculate</span>
+                </button>
             </div>
-            <div class="calc-input-group" id="percentageGroup">
-                <label>Percentage (%)</label>
-                <input type="number" class="calc-input" id="percentage" placeholder="Enter percentage" value="20" step="0.01">
+
+            <style>
+                .percentage-calculator-container {
+                    max-width: 600px;
+                    margin: 0 auto;
+                }
+
+                .calc-mode-select {
+                    font-weight: 500;
+                    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+                }
+
+                .btn {
+                    width: 100%;
+                    padding: 1.2rem 2rem;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    margin-top: 1.5rem;
+                }
+
+                .btn-primary {
+                    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+                    color: white;
+                }
+
+                .btn-primary:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+                }
+            </style>
+        `;
+
+        // Hide default calculate button
+        const defaultBtn = document.getElementById('calculate');
+        if (defaultBtn) {
+            defaultBtn.style.display = 'none';
+        }
+
+        updateInputFields('basic');
+    }
+
+    function setupEventListeners() {
+        // Mode change
+        document.getElementById('calculationMode')?.addEventListener('change', function() {
+            calcMode = this.value;
+            updateInputFields(calcMode);
+        });
+
+        // Calculate button
+        document.getElementById('calculateBtn')?.addEventListener('click', calculate);
+
+        // Enter key support
+        document.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && e.target.classList.contains('calc-input')) {
+                calculate();
+            }
+        });
+    }
+
+    function updateInputFields(mode) {
+        const container = document.getElementById('inputFields');
+        if (!container) return;
+
+        let html = '';
+
+        switch(mode) {
+            case 'basic':
+                html = `
+                    <div class="calc-input-group">
+                        <label for="percentage">Percentage (%)</label>
+                        <input type="number" class="calc-input" id="percentage" placeholder="e.g., 20" value="20" step="0.01">
+                    </div>
+                    <div class="calc-input-group">
+                        <label for="number">Number</label>
+                        <input type="number" class="calc-input" id="number" placeholder="e.g., 500" value="500" step="0.01">
+                    </div>
+                `;
+                break;
+            case 'percent':
+                html = `
+                    <div class="calc-input-group">
+                        <label for="part">Part (X)</label>
+                        <input type="number" class="calc-input" id="part" placeholder="e.g., 25" value="25" step="0.01">
+                    </div>
+                    <div class="calc-input-group">
+                        <label for="whole">Whole (Y)</label>
+                        <input type="number" class="calc-input" id="whole" placeholder="e.g., 100" value="100" step="0.01">
+                    </div>
+                `;
+                break;
+            case 'whole':
+                html = `
+                    <div class="calc-input-group">
+                        <label for="part">Part (X)</label>
+                        <input type="number" class="calc-input" id="part" placeholder="e.g., 30" value="30" step="0.01">
+                    </div>
+                    <div class="calc-input-group">
+                        <label for="percentage">Percentage (Y%)</label>
+                        <input type="number" class="calc-input" id="percentage" placeholder="e.g., 15" value="15" step="0.01">
+                    </div>
+                `;
+                break;
+            case 'increase':
+            case 'decrease':
+            case 'change':
+                html = `
+                    <div class="calc-input-group">
+                        <label for="original">Original Value</label>
+                        <input type="number" class="calc-input" id="original" placeholder="e.g., 200" value="200" step="0.01">
+                    </div>
+                    <div class="calc-input-group">
+                        <label for="new">New Value</label>
+                        <input type="number" class="calc-input" id="new" placeholder="e.g., 250" value="250" step="0.01">
+                    </div>
+                `;
+                break;
+            case 'difference':
+                html = `
+                    <div class="calc-input-group">
+                        <label for="value1">First Value</label>
+                        <input type="number" class="calc-input" id="value1" placeholder="e.g., 150" value="150" step="0.01">
+                    </div>
+                    <div class="calc-input-group">
+                        <label for="value2">Second Value</label>
+                        <input type="number" class="calc-input" id="value2" placeholder="e.g., 200" value="200" step="0.01">
+                    </div>
+                `;
+                break;
+        }
+
+        container.innerHTML = html;
+    }
+
+    function calculate() {
+        let result, explanation;
+
+        switch(calcMode) {
+            case 'basic':
+                result = calculateBasic();
+                break;
+            case 'percent':
+                result = calculatePercent();
+                break;
+            case 'whole':
+                result = calculateWhole();
+                break;
+            case 'increase':
+                result = calculateIncrease();
+                break;
+            case 'decrease':
+                result = calculateDecrease();
+                break;
+            case 'change':
+                result = calculateChange();
+                break;
+            case 'difference':
+                result = calculateDifference();
+                break;
+        }
+
+        if (result) {
+            displayResults(result);
+        }
+
+        // Track calculation
+        if (typeof trackCalculation === 'function') {
+            trackCalculation('percentage', { mode: calcMode, result: result.value }, {});
+        }
+    }
+
+    function calculateBasic() {
+        const percentage = parseFloat(document.getElementById('percentage')?.value || 0);
+        const number = parseFloat(document.getElementById('number')?.value || 0);
+
+        if (percentage < 0 || number < 0) {
+            alert('Please enter valid positive numbers');
+            return null;
+        }
+
+        const value = (percentage / 100) * number;
+
+        return {
+            value: value,
+            formula: `${percentage}% of ${number} = (${percentage}/100) × ${number}`,
+            explanation: `${percentage}% of ${number} is ${value.toFixed(2)}`,
+            inputs: { percentage, number },
+            visualPercent: percentage
+        };
+    }
+
+    function calculatePercent() {
+        const part = parseFloat(document.getElementById('part')?.value || 0);
+        const whole = parseFloat(document.getElementById('whole')?.value || 0);
+
+        if (whole === 0) {
+            alert('Whole number cannot be zero');
+            return null;
+        }
+
+        const percentage = (part / whole) * 100;
+
+        return {
+            value: percentage,
+            formula: `(${part}/${whole}) × 100`,
+            explanation: `${part} is ${percentage.toFixed(2)}% of ${whole}`,
+            inputs: { part, whole },
+            visualPercent: Math.min(percentage, 100)
+        };
+    }
+
+    function calculateWhole() {
+        const part = parseFloat(document.getElementById('part')?.value || 0);
+        const percentage = parseFloat(document.getElementById('percentage')?.value || 0);
+
+        if (percentage === 0) {
+            alert('Percentage cannot be zero');
+            return null;
+        }
+
+        const whole = (part * 100) / percentage;
+
+        return {
+            value: whole,
+            formula: `(${part} × 100) / ${percentage}`,
+            explanation: `${part} is ${percentage}% of ${whole.toFixed(2)}`,
+            inputs: { part, percentage },
+            visualPercent: percentage
+        };
+    }
+
+    function calculateIncrease() {
+        const original = parseFloat(document.getElementById('original')?.value || 0);
+        const newValue = parseFloat(document.getElementById('new')?.value || 0);
+
+        if (original === 0) {
+            alert('Original value cannot be zero');
+            return null;
+        }
+
+        const increase = newValue - original;
+        const percentIncrease = (increase / original) * 100;
+
+        return {
+            value: percentIncrease,
+            formula: `((${newValue} - ${original}) / ${original}) × 100`,
+            explanation: `Increase from ${original} to ${newValue} is ${percentIncrease.toFixed(2)}%`,
+            inputs: { original, new: newValue, increase },
+            visualPercent: Math.abs(percentIncrease)
+        };
+    }
+
+    function calculateDecrease() {
+        const original = parseFloat(document.getElementById('original')?.value || 0);
+        const newValue = parseFloat(document.getElementById('new')?.value || 0);
+
+        if (original === 0) {
+            alert('Original value cannot be zero');
+            return null;
+        }
+
+        const decrease = original - newValue;
+        const percentDecrease = (decrease / original) * 100;
+
+        return {
+            value: percentDecrease,
+            formula: `((${original} - ${newValue}) / ${original}) × 100`,
+            explanation: `Decrease from ${original} to ${newValue} is ${percentDecrease.toFixed(2)}%`,
+            inputs: { original, new: newValue, decrease },
+            visualPercent: Math.abs(percentDecrease)
+        };
+    }
+
+    function calculateChange() {
+        const original = parseFloat(document.getElementById('original')?.value || 0);
+        const newValue = parseFloat(document.getElementById('new')?.value || 0);
+
+        if (original === 0) {
+            alert('Original value cannot be zero');
+            return null;
+        }
+
+        const change = newValue - original;
+        const percentChange = (change / original) * 100;
+        const isIncrease = change > 0;
+
+        return {
+            value: percentChange,
+            formula: `((${newValue} - ${original}) / ${original}) × 100`,
+            explanation: `${isIncrease ? 'Increase' : 'Decrease'} from ${original} to ${newValue} is ${Math.abs(percentChange).toFixed(2)}%`,
+            inputs: { original, new: newValue, change },
+            visualPercent: Math.abs(percentChange),
+            isIncrease
+        };
+    }
+
+    function calculateDifference() {
+        const value1 = parseFloat(document.getElementById('value1')?.value || 0);
+        const value2 = parseFloat(document.getElementById('value2')?.value || 0);
+
+        const average = (value1 + value2) / 2;
+        if (average === 0) {
+            alert('Average cannot be zero');
+            return null;
+        }
+
+        const difference = Math.abs(value1 - value2);
+        const percentDifference = (difference / average) * 100;
+
+        return {
+            value: percentDifference,
+            formula: `(|${value1} - ${value2}| / ((${value1} + ${value2})/2)) × 100`,
+            explanation: `Percentage difference between ${value1} and ${value2} is ${percentDifference.toFixed(2)}%`,
+            inputs: { value1, value2, difference, average },
+            visualPercent: Math.min(percentDifference, 100)
+        };
+    }
+
+    function displayResults(data) {
+        const resultsDiv = document.getElementById('results');
+        if (!resultsDiv) return;
+
+        resultsDiv.style.display = 'block';
+        resultsDiv.innerHTML = `
+            <!-- Main Result Card -->
+            <div class="percentage-result-card">
+                <div class="result-icon">📊</div>
+                <div class="result-content">
+                    <div class="result-label">Result</div>
+                    <div class="result-value">${data.value.toFixed(2)}${calcMode === 'basic' ? '' : '%'}</div>
+                </div>
             </div>
-            <div class="calc-input-group" id="numberGroup">
-                <label>Number</label>
-                <input type="number" class="calc-input" id="number" placeholder="Enter number" value="500" step="0.01">
+
+            <!-- Visual Percentage Bar -->
+            ${generatePercentageBar(data.visualPercent)}
+
+            <!-- Calculation Details -->
+            <div class="result-breakdown">
+                <h3>📐 Calculation Details</h3>
+                <div class="details-grid">
+                    <div class="detail-row">
+                        <span>Formula:</span>
+                        <span style="font-weight: 600; font-family: monospace;">${data.formula}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span>Explanation:</span>
+                        <span style="font-weight: 600;">${data.explanation}</span>
+                    </div>
+                </div>
             </div>
-            <div class="calc-input-group" id="value1Group" style="display:none;">
-                <label>Value 1 (Original/First)</label>
-                <input type="number" class="calc-input" id="value1" placeholder="Original value" value="100" step="0.01">
-            </div>
-            <div class="calc-input-group" id="value2Group" style="display:none;">
-                <label>Value 2 (New/Second)</label>
-                <input type="number" class="calc-input" id="value2" placeholder="New value" value="150" step="0.01">
-            </div>
-            <div class="calc-input-group">
-                <label>Context (Optional)</label>
-                <select class="calc-input" id="context">
-                    <option value="general">General Calculation</option>
-                    <option value="salary">Salary/Income</option>
-                    <option value="marks">Marks/Grades</option>
-                    <option value="price">Price/Cost</option>
-                    <option value="discount">Discount/Savings</option>
-                    <option value="tax">Tax/Fees</option>
-                    <option value="investment">Investment Returns</option>
-                    <option value="growth">Business Growth</option>
-                </select>
+
+            <!-- Input Breakdown -->
+            ${generateInputBreakdown(data.inputs)}
+
+            <style>
+                .percentage-result-card {
+                    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+                    color: white;
+                    border-radius: 16px;
+                    padding: 2.5rem;
+                    margin-bottom: 2rem;
+                    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.3);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 2rem;
+                }
+
+                .result-icon {
+                    font-size: 4rem;
+                }
+
+                .result-content {
+                    text-align: center;
+                }
+
+                .result-label {
+                    font-size: 1rem;
+                    opacity: 0.9;
+                    margin-bottom: 0.5rem;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                .result-value {
+                    font-size: 3.5rem;
+                    font-weight: 700;
+                    line-height: 1;
+                }
+
+                .percentage-bar-container {
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 12px;
+                    margin-bottom: 2rem;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+                }
+
+                .percentage-bar-container h3 {
+                    margin-bottom: 1.5rem;
+                    color: #1f2937;
+                }
+
+                .percentage-visual-bar {
+                    height: 60px;
+                    background: #f3f4f6;
+                    border-radius: 30px;
+                    overflow: hidden;
+                    position: relative;
+                    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+                }
+
+                .percentage-fill {
+                    height: 100%;
+                    background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding-right: 1.5rem;
+                    transition: width 1s ease;
+                }
+
+                .percentage-fill-label {
+                    color: white;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                }
+
+                .input-breakdown-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 1rem;
+                    margin-top: 1rem;
+                }
+
+                .input-breakdown-card {
+                    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+                    padding: 1.25rem;
+                    border-radius: 10px;
+                    border: 2px solid #e5e7eb;
+                    text-align: center;
+                }
+
+                .input-breakdown-label {
+                    font-size: 0.85rem;
+                    color: #6b7280;
+                    margin-bottom: 0.5rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+
+                .input-breakdown-value {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: #f59e0b;
+                }
+
+                .details-grid {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.75rem;
+                    margin-top: 1rem;
+                }
+
+                .detail-row {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 1rem;
+                    background: #f9fafb;
+                    border-radius: 6px;
+                    gap: 1rem;
+                }
+
+                @media (max-width: 768px) {
+                    .percentage-result-card {
+                        flex-direction: column;
+                        gap: 1rem;
+                        padding: 2rem;
+                    }
+
+                    .result-value {
+                        font-size: 2.5rem;
+                    }
+
+                    .detail-row {
+                        flex-direction: column;
+                        gap: 0.5rem;
+                    }
+
+                    .input-breakdown-grid {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+        `;
+
+        resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function generatePercentageBar(percent) {
+        const displayPercent = Math.min(Math.abs(percent), 100);
+
+        return `
+            <div class="percentage-bar-container">
+                <h3>📊 Visual Representation</h3>
+                <div class="percentage-visual-bar">
+                    <div class="percentage-fill" style="width: ${displayPercent}%;">
+                        <span class="percentage-fill-label">${percent.toFixed(1)}%</span>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280;">
+                    <span>0%</span>
+                    <span>50%</span>
+                    <span>100%</span>
+                </div>
             </div>
         `;
     }
 
-    function updateInputFields(mode) {
-        const percentageGroup = document.getElementById('percentageGroup');
-        const numberGroup = document.getElementById('numberGroup');
-        const value1Group = document.getElementById('value1Group');
-        const value2Group = document.getElementById('value2Group');
+    function generateInputBreakdown(inputs) {
+        let html = '<div class="result-breakdown"><h3>📋 Input Values</h3><div class="input-breakdown-grid">';
 
-        if (mode === 'basic' || mode === 'whole') {
-            if (percentageGroup) percentageGroup.style.display = 'block';
-            if (numberGroup) numberGroup.style.display = 'block';
-            if (value1Group) value1Group.style.display = 'none';
-            if (value2Group) value2Group.style.display = 'none';
-        } else if (mode === 'percent') {
-            if (percentageGroup) percentageGroup.style.display = 'none';
-            if (numberGroup) numberGroup.style.display = 'block';
-            if (value1Group) value1Group.style.display = 'block';
-            if (value2Group) value2Group.style.display = 'none';
-        } else {
-            // increase, decrease, change, difference
-            if (percentageGroup) percentageGroup.style.display = 'none';
-            if (numberGroup) numberGroup.style.display = 'none';
-            if (value1Group) value1Group.style.display = 'block';
-            if (value2Group) value2Group.style.display = 'block';
-        }
-    }
-
-    function calculate() {
-        const calculationMode = document.getElementById('calculationMode').value;
-        const percentage = parseFloat(document.getElementById('percentage')?.value) || 0;
-        const number = parseFloat(document.getElementById('number')?.value) || 0;
-        const value1 = parseFloat(document.getElementById('value1')?.value) || 0;
-        const value2 = parseFloat(document.getElementById('value2')?.value) || 0;
-        const context = document.getElementById('context').value;
-
-        let result = 0;
-        let calculationSteps = '';
-        let explanation = '';
-        let formula = '';
-
-        if (calculationMode === 'basic') {
-            // What is X% of Y?
-            if (number === 0) {
-                alert('Please enter a valid number');
-                return;
-            }
-            result = (percentage / 100) * number;
-            formula = `${percentage}% of ${number}`;
-            calculationSteps = `(${percentage} / 100) × ${number} = ${result.toFixed(2)}`;
-            explanation = `${percentage}% of ${number} is ${result.toFixed(2)}`;
-        } else if (calculationMode === 'percent') {
-            // What % is X of Y?
-            if (number === 0) {
-                alert('Please enter valid values');
-                return;
-            }
-            result = (value1 / number) * 100;
-            formula = `(${value1} / ${number}) × 100`;
-            calculationSteps = `(${value1} / ${number}) × 100 = ${result.toFixed(2)}%`;
-            explanation = `${value1} is ${result.toFixed(2)}% of ${number}`;
-        } else if (calculationMode === 'whole') {
-            // X is Y% of what?
-            if (percentage === 0) {
-                alert('Please enter a valid percentage');
-                return;
-            }
-            result = (number / percentage) * 100;
-            formula = `(${number} / ${percentage}) × 100`;
-            calculationSteps = `(${number} / ${percentage}) × 100 = ${result.toFixed(2)}`;
-            explanation = `${number} is ${percentage}% of ${result.toFixed(2)}`;
-        } else if (calculationMode === 'increase') {
-            // Percentage increase
-            if (value1 === 0) {
-                alert('Please enter valid original value');
-                return;
-            }
-            const increase = value2 - value1;
-            result = (increase / value1) * 100;
-            formula = `((${value2} - ${value1}) / ${value1}) × 100`;
-            calculationSteps = `((${value2} - ${value1}) / ${value1}) × 100 = ${result.toFixed(2)}%`;
-            explanation = `Increase from ${value1} to ${value2} is ${result.toFixed(2)}%`;
-        } else if (calculationMode === 'decrease') {
-            // Percentage decrease
-            if (value1 === 0) {
-                alert('Please enter valid original value');
-                return;
-            }
-            const decrease = value1 - value2;
-            result = (decrease / value1) * 100;
-            formula = `((${value1} - ${value2}) / ${value1}) × 100`;
-            calculationSteps = `((${value1} - ${value2}) / ${value1}) × 100 = ${result.toFixed(2)}%`;
-            explanation = `Decrease from ${value1} to ${value2} is ${result.toFixed(2)}%`;
-        } else if (calculationMode === 'change') {
-            // Percentage change (positive or negative)
-            if (value1 === 0) {
-                alert('Please enter valid original value');
-                return;
-            }
-            const change = value2 - value1;
-            result = (change / value1) * 100;
-            formula = `((${value2} - ${value1}) / ${value1}) × 100`;
-            calculationSteps = `((${value2} - ${value1}) / ${value1}) × 100 = ${result.toFixed(2)}%`;
-            explanation = `Change from ${value1} to ${value2} is ${result >= 0 ? '+' : ''}${result.toFixed(2)}%`;
-        } else if (calculationMode === 'difference') {
-            // Percentage difference (absolute)
-            if (value1 === 0 || value2 === 0) {
-                alert('Please enter valid values');
-                return;
-            }
-            const average = (value1 + value2) / 2;
-            const difference = Math.abs(value2 - value1);
-            result = (difference / average) * 100;
-            formula = `(|${value2} - ${value1}| / ((${value1} + ${value2}) / 2)) × 100`;
-            calculationSteps = `(${difference} / ${average}) × 100 = ${result.toFixed(2)}%`;
-            explanation = `The percentage difference between ${value1} and ${value2} is ${result.toFixed(2)}%`;
-        }
-
-        // Context-specific insights
-        const contextInsights = {
-            'salary': getContextInsight('salary', calculationMode, result, value1, value2),
-            'marks': getContextInsight('marks', calculationMode, result, value1, value2),
-            'price': getContextInsight('price', calculationMode, result, value1, value2),
-            'discount': getContextInsight('discount', calculationMode, result, value1, value2),
-            'tax': getContextInsight('tax', calculationMode, result, value1, value2),
-            'investment': getContextInsight('investment', calculationMode, result, value1, value2),
-            'growth': getContextInsight('growth', calculationMode, result, value1, value2),
-            'general': 'General percentage calculation'
-        };
-
-        // Additional calculations based on mode
-        let additionalInfo = getAdditionalInfo(calculationMode, percentage, number, value1, value2, result);
-
-        const resultsDiv = document.getElementById('results');
-        if (resultsDiv) {
-            resultsDiv.style.display = 'block';
-            resultsDiv.innerHTML = `
-                <div class="result-item main-result">
-                    <span class="result-label">Result</span>
-                    <span class="result-value">${formatResult(calculationMode, result)}</span>
-                </div>
-                <div class="result-item">
-                    <span class="result-label">Explanation</span>
-                    <span class="result-value" style="font-size: 0.9em">${explanation}</span>
-                </div>
-                <div class="result-breakdown">
-                    <h3>Calculation Details</h3>
-                    <div class="breakdown-item">
-                        <span>Formula:</span>
-                        <span>${formula}</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>Calculation Steps:</span>
-                        <span>${calculationSteps}</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>Result:</span>
-                        <span style="font-weight: bold; color: #10B981">${formatResult(calculationMode, result)}</span>
-                    </div>
-                </div>
-                ${additionalInfo.html}
-                <div class="result-breakdown">
-                    <h3>Context: ${context.charAt(0).toUpperCase() + context.slice(1)}</h3>
-                    <div class="breakdown-item">
-                        <span>Application:</span>
-                        <span>${contextInsights[context]}</span>
-                    </div>
-                </div>
-                <div class="result-breakdown">
-                    <h3>Quick Reference</h3>
-                    <div class="breakdown-item">
-                        <span>Type of Calculation:</span>
-                        <span>${getCalculationTypeLabel(calculationMode)}</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>Formula Pattern:</span>
-                        <span>${getFormulaPattern(calculationMode)}</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>Common Uses:</span>
-                        <span>${getCommonUses(calculationMode)}</span>
-                    </div>
-                </div>
-                <div class="result-breakdown">
-                    <h3>Percentage Basics</h3>
-                    <div class="breakdown-item">
-                        <span>What is a Percentage?:</span>
-                        <span>A ratio expressed as a fraction of 100</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>Symbol:</span>
-                        <span>% (percent sign)</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>Origin:</span>
-                        <span>From Latin "per centum" meaning "by the hundred"</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>Conversion:</span>
-                        <span>Percentage = (Part / Whole) × 100</span>
-                    </div>
-                </div>
-                <div class="result-actions">
-                    <button class="btn btn-outline" onclick="window.print()">Print</button>
-                    <button class="btn btn-outline" id="shareResult">Share</button>
+        for (const [key, value] of Object.entries(inputs)) {
+            const label = key.charAt(0).toUpperCase() + key.slice(1);
+            html += `
+                <div class="input-breakdown-card">
+                    <div class="input-breakdown-label">${label}</div>
+                    <div class="input-breakdown-value">${value.toFixed(2)}</div>
                 </div>
             `;
         }
 
-        // Track high-value calculation
-        if (typeof trackCalculation === 'function') {
-            trackCalculation('percentage', {
-                mode: calculationMode,
-                result,
-                context
-            }, {
-                value: 'high-cpc',
-                calculationType: calculationMode
-            });
-        }
-
-        // Trigger additional ad impressions for high-value calculators
-        if (window.AdManager && window.AdManager.refresh) {
-            setTimeout(() => window.AdManager.refresh('ad-slot-bottom'), 2000);
-        }
-    }
-
-    function formatResult(mode, result) {
-        if (mode === 'basic' || mode === 'whole') {
-            return result.toLocaleString('en-IN', {maximumFractionDigits: 2});
-        } else {
-            return `${result.toFixed(2)}%`;
-        }
-    }
-
-    function getCalculationTypeLabel(mode) {
-        const labels = {
-            'basic': 'Basic Percentage (X% of Y)',
-            'percent': 'Percentage Ratio (What % is X of Y)',
-            'whole': 'Reverse Percentage (X is Y% of what)',
-            'increase': 'Percentage Increase',
-            'decrease': 'Percentage Decrease',
-            'change': 'Percentage Change',
-            'difference': 'Percentage Difference'
-        };
-        return labels[mode] || 'Percentage Calculation';
-    }
-
-    function getFormulaPattern(mode) {
-        const patterns = {
-            'basic': '(Percentage / 100) × Number',
-            'percent': '(Part / Whole) × 100',
-            'whole': '(Part / Percentage) × 100',
-            'increase': '((New - Old) / Old) × 100',
-            'decrease': '((Old - New) / Old) × 100',
-            'change': '((New - Old) / Old) × 100',
-            'difference': '(|V2 - V1| / Average) × 100'
-        };
-        return patterns[mode] || 'Standard percentage formula';
-    }
-
-    function getCommonUses(mode) {
-        const uses = {
-            'basic': 'Discounts, tips, tax calculation, commission',
-            'percent': 'Grades, test scores, efficiency, completion rate',
-            'whole': 'Finding original price, base salary, total marks',
-            'increase': 'Salary hikes, price increases, growth rates',
-            'decrease': 'Discounts, depreciation, loss calculation',
-            'change': 'Stock markets, economic indicators, YoY growth',
-            'difference': 'Comparing two values, variance analysis'
-        };
-        return uses[mode] || 'General percentage calculations';
-    }
-
-    function getContextInsight(context, mode, result, val1, val2) {
-        const insights = {
-            'salary': {
-                'increase': `${result.toFixed(2)}% salary hike from ₹${val1.toLocaleString('en-IN')} to ₹${val2.toLocaleString('en-IN')}`,
-                'basic': 'Calculate bonus, increment, or deduction',
-                'default': 'Useful for salary negotiations and increment calculations'
-            },
-            'marks': {
-                'percent': `Scored ${result.toFixed(2)}% - ${result >= 90 ? 'Outstanding!' : result >= 75 ? 'Distinction' : result >= 60 ? 'First Class' : result >= 50 ? 'Second Class' : result >= 40 ? 'Pass' : 'Need improvement'}`,
-                'default': 'Grade calculation and academic performance analysis'
-            },
-            'price': {
-                'increase': `Price increased by ${result.toFixed(2)}% from ₹${val1.toLocaleString('en-IN')} to ₹${val2.toLocaleString('en-IN')}`,
-                'decrease': `Price reduced by ${result.toFixed(2)}% from ₹${val1.toLocaleString('en-IN')} to ₹${val2.toLocaleString('en-IN')}`,
-                'default': 'Price comparison and market analysis'
-            },
-            'discount': {
-                'basic': `Discount amount or savings calculation`,
-                'decrease': `${result.toFixed(2)}% discount saves you ₹${(val1 - val2).toLocaleString('en-IN')}`,
-                'default': 'Shopping discounts and offers analysis'
-            },
-            'tax': {
-                'basic': 'Tax amount calculation (GST, Income Tax)',
-                'default': 'Tax planning and compliance calculations'
-            },
-            'investment': {
-                'increase': `${result.toFixed(2)}% return on investment - ${result >= 15 ? 'Excellent returns!' : result >= 10 ? 'Good returns' : result >= 5 ? 'Moderate returns' : 'Low returns'}`,
-                'default': 'ROI and investment performance tracking'
-            },
-            'growth': {
-                'increase': `${result.toFixed(2)}% business growth - ${result >= 50 ? 'Exceptional!' : result >= 30 ? 'Strong growth' : result >= 15 ? 'Healthy growth' : result >= 5 ? 'Steady growth' : 'Slow growth'}`,
-                'default': 'Business metrics and KPI tracking'
-            }
-        };
-
-        return insights[context]?.[mode] || insights[context]?.['default'] || 'General percentage application';
-    }
-
-    function getAdditionalInfo(mode, percentage, number, value1, value2, result) {
-        let html = '';
-
-        if (mode === 'basic') {
-            const remaining = number - result;
-            const remainingPercent = 100 - percentage;
-            html = `
-                <div class="result-breakdown">
-                    <h3>Additional Information</h3>
-                    <div class="breakdown-item">
-                        <span>Total Number:</span>
-                        <span>${number.toLocaleString('en-IN', {maximumFractionDigits: 2})}</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>${percentage}% of ${number}:</span>
-                        <span style="color: #10B981">${result.toLocaleString('en-IN', {maximumFractionDigits: 2})}</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>Remaining ${remainingPercent}%:</span>
-                        <span>${remaining.toLocaleString('en-IN', {maximumFractionDigits: 2})}</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>As Decimal:</span>
-                        <span>${(percentage / 100).toFixed(4)}</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>As Fraction:</span>
-                        <span>${percentage}/100 (simplified: ${simplifyFraction(percentage, 100)})</span>
-                    </div>
-                </div>
-            `;
-        } else if (mode === 'increase' || mode === 'decrease' || mode === 'change') {
-            const absoluteChange = Math.abs(value2 - value1);
-            const multiplier = value2 / value1;
-            html = `
-                <div class="result-breakdown">
-                    <h3>Change Analysis</h3>
-                    <div class="breakdown-item">
-                        <span>Original Value:</span>
-                        <span>${value1.toLocaleString('en-IN', {maximumFractionDigits: 2})}</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>New Value:</span>
-                        <span>${value2.toLocaleString('en-IN', {maximumFractionDigits: 2})}</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>Absolute Change:</span>
-                        <span style="color: ${value2 > value1 ? '#10B981' : '#EF4444'}">${value2 > value1 ? '+' : '-'}${absoluteChange.toLocaleString('en-IN', {maximumFractionDigits: 2})}</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>Percentage Change:</span>
-                        <span style="color: ${result >= 0 ? '#10B981' : '#EF4444'}">${result >= 0 ? '+' : ''}${result.toFixed(2)}%</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>Growth Multiplier:</span>
-                        <span>${multiplier.toFixed(2)}x</span>
-                    </div>
-                    <div class="breakdown-item">
-                        <span>Direction:</span>
-                        <span>${value2 > value1 ? '📈 Upward' : value2 < value1 ? '📉 Downward' : '➡️ No change'}</span>
-                    </div>
-                </div>
-            `;
-        }
-
-        return { html };
-    }
-
-    function simplifyFraction(numerator, denominator) {
-        const gcd = (a, b) => b === 0 ? a : gcd(b, a % b);
-        const divisor = gcd(numerator, denominator);
-        const simplified = `${numerator / divisor}/${denominator / divisor}`;
-        return simplified === `${numerator}/${denominator}` ? 'already simplified' : simplified;
-    }
-
-    function loadAffiliateOffers() {
-        // Placeholder for affiliate content loading
-        console.log('Loading affiliate offers for percentage calculator');
+        html += '</div></div>';
+        return html;
     }
 
     if (document.readyState === 'loading') {
